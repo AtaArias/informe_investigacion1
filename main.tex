@@ -1,0 +1,29 @@
+\documentclass[11pt, twocolumn]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper, top=2cm, bottom=2cm, left=1cm, right=1cm]{geometry}
+\usepackage{graphicx}
+\usepackage[spanish, es-noshorthands]{babel}
+\usepackage{biblatex}
+\usepackage{siunitx}
+\usepackage[version=4]{mhchem}
+\graphicspath{{./assets/}}
+\usepackage{csquotes}
+\usepackage{subcaption}
+\addbibresource{bib.bib}
+
+\newcommand{\logoA}{\resizebox{!}{2cm}{\includegraphics{img14.jpg}}}
+\newcommand{\logoB}{\resizebox{!}{3cm}{\includegraphics{logo_ib.png}}}
+\newcommand{\logoC}{\resizebox{!}{3cm}{\includegraphics{logo_cnea.png}}}
+
+\begin{document}
+	
+	\input{./secciones/titlepage}
+	\input{./secciones/introduccion}
+	\input{./secciones/metodos}
+	\input{./secciones/resutaldos}
+	\input{./secciones/conclusion}
+	
+	\printbibliography
+\end{document}

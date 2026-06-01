@@ -1,0 +1,134 @@
+\section{Materiales y métodos}
+
+\subsection{Síntesis de las nanopartículas}
+
+%Síntesis de las nanopartículas
+\textbf{Síntesis.}. Las nanopartículas fueron sintetizadas siguiendo el proceso descrito por Zhang (2011)\cite{zhang2011}. 
+El volumen total de la solución es fijado en \SI{25}{mL}.
+Se disuelve nitrato de plata (\ce{AgNO3}, \SI{0.05}{M}, \SI{50}{\micro L}), citrato de sodio (\ce{Na3C6H5O7}, \SI{75}{mM}, \SI{75}{mM}) y peróxido de hidrógeno (\ce{H2O2}, 30 wt \%, \SI{60}{\micro L}) en \SI{24.75}{mL} de agua miliq (Aclaro acá qué es el agua miliq?).
+Luego se añade Borohidruro de sodio (\ce{NaBH4}, \SI{100}{mM}, \SI{250}{\micro L}) a la solución bajo agitación.
+Inmediatamente tornándose de un color amarillo claro. 
+Unos minutos después la solución cambia a amarillo oscuro, rojo, verde y azul sucesivamente.
+En función de las proporciones utilizadas se detiene la reacción en el color deseado de solución.
+Es decir, controlando el tamaño y forma de las nanopartículas.
+
+[Pongo algún comentario del estado de limpieza de los elementos y la necesidad de la limpieza para obtener buenos resultados?]
+
+
+% Conectar el procedimiento con la explicación de los roles
+% Rol de cada reactivo
+El nitrato se utiliza como fuente de plata, al ser disuelto en agua se obtienen iones plata \ce{Ag+} en solución.
+El citrato de sodio funciona como estabilizador. 
+Se adhiere a la superficie de las partículas durante el crecimiento.
+De esta manera se evita que toda la plata precipite a un único material. 
+El borohidruro de sodio se utiliza como agente reductor, llevando la plata de \ce{Ag+} a \ce{Ag}. 
+El reductor se encuentra en exceso dentro de la solución, de manera que eventualmente toda la plata en la solución va a precipitar.
+El peróxido de hidrógeno (\ce{H2O2}) es un oxidante, por lo que está en constante intercambio con el borohidruro de sodio.
+La interacción entre la reducción producida por el \ce{NaBH4} y la oxidación producida por el \ce{H2O2} fomentan la formación de fallas de apilamiento el durante el crecimiento de las nanopartículas. 
+La presencia de las fallas es el causa que a las partículas que se agreguen a la nanopartícula en crecimiento lo hagan sobre los lados de la nanopartículas que presenta fallas.
+Esto genera que en lugar de crecer de manera isotrópica, hasta llegar a un dodecaedro, crece de manera anisotrópica formando platos. 
+Igualmente, no todos los planos tienen la misma "prioridad" de crecimiento, de esta manera, en lugar de crecer platos hexagonales de se forman platos triangulares de plata.
+
+En la literatura hay varias teorías sobre el mecanismo de crecimiento de las nanopartículas. Rocha (2007) \cite{rocha2007} hipotetizó que las fallas en la partículas formaban una zona de hcp rodeada por dos capas de fcc. Sin embarga, estudios recientes por Tan (2021) \cite{tan2021} observaron una disposición más compleja de las fallas dentro de la pila de planos.
+
+%(Por qué necesito fallas de tipo twin? Cómo controlo el espesor? Por qué son de espesores similares si dejen de crecer en teoría cuando se le adhiere un capping agent a la superficie)
+
+%Poner algún diagramita de que es lo que sucede
+
+\subsection{Caracterización de las nanopartículas.}
+
+% Diagrama del microscopio
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{Scheme_TEM_en.svg.png}
+	\caption{Diagrama esquemático del microscopio de transmisión electrónica. \textbf{Fuente de la imagen}}
+	\label{fig:esquema_TEM}
+\end{figure}
+
+% Diagrama del funciomiento del microscopio. Caminos ópticos de los haces
+%\begin{figure}
+%	\includegraphics[width=0.8\linewidth]{Scheme_TEM_en.svg.png}
+%	\caption{Diagrama del camino óptico dentro de la columna del microscopio.}
+%	\label{fig:opticas_TEM}
+%\end{figure}
+
+% Funcionamiento general del microscopio
+Para observar las nanopartículas individualmente es necesario disponer de un dispositivo que tenga resolución nanométrica.
+A esta escala, la mayoría de microscopios electrónicos comienzan a tener dificultades.
+Pero en particular, los microscopios de transmisión electrónica son un buen "fit" para analizar las nanopartículas.
+Principalmente, porque para que los microscopios de transmisión electrónica funcionen correctamente es necesario que las muestras sean delgadas.
+Y algo que sería una desventaja, el pequeño tamaño de las partículas, se convierte a una conveniencia para utilizar el instrumental.
+
+Por esto, es pertinente que el lector tenga un idea básica del funcionamiento de un microscopio de transmisión electrónica.
+De forma muy simplificada, un haz de electrones atraviesa la muestra y detrás de la muestra se observa el haz de salida luego de interactuar con los átomos del espécimen. 
+En general, las técnicas de microscopia de transmisión (TEM), son de gran utilidad para analizar la estructura cristalina de los materiales.
+Ya que la longitud de onda de los electrones que conforman el haz se encuentra en el orden de los armostrong. 
+
+Todos los sistemas de funcionamiento del microscopio están alojados dentro de una columna vertical, Fig. \ref{fig:esquema_TEM}. Se distinguen 6 sistemas principales; el sistema de vacio, las lentes condensadoras, las lentes objetivo, el portamuestras, las lentes proyectoras y la pantalla.
+
+Sistema de vacio.
+
+Para producir el haz de electrones se utiliza cañón de electrones. 
+Existen diferentes tipos de cañones, pero se pueden diferenciar por el tamaño del haz resultante y la dispersión de energía en los electrones resultantes.
+La tecnología más simple es el cañón de tungsteno \ref{}. Se circula una corriente sobre un cable de tungsteno hasta que comienza a emitir electrones por efecto de la temperatura. Este clabe, se pone de manera que posee una punta, de donde comienza a emitir electrones. Y estos son acelerados por un potencial del orden de \SI{200}{kV}.
+Este toma imágenes de la constitución de una muestra mediante la utilización de haces de electrones que la atraviesan.
+En general los microscopios de transmisión electrónica se puedan analizar en varias secciones a lo largo de la columna que los aloja.
+
+% -- Rol de cada componente --
+% 	-- Fuente de electrones --
+Primer se tiene la fuente del haz de electrónes. Se tienen varios tipos según el mecanismo de emisión de electrones, la mas comunes son fuentes del tipo FG(field emission gun). La fuente del haz de electrones determina la intensidad máxima que se puede alcanzar, el tamaño del haz utilizado y finalmente la dispersión de energía del haz generado.
+
+Mientras "mejor" sea la fuente de electrones, mayor es la intensidad máxima de la fuente, menor es el potencial de aceleración necesario para desprender electrones y menor es la dispersión de energía del haz de electrones. 
+La dispersión en energía entra en juego más adelante cuando hablemos de el conjunto de lentes con el cual se forma la imagen.
+
+% 	-- Lentes condensadores --
+Debajo de la fuente de electrones, en la columna tenemos las lentes de alineación del haz. Con estas nos encargamos de que el haz incida de la manera que más nos convenga sobre la muestra. Y que estemos minimizando al máximo las aberraciones en la imagen resultante.
+
+%	-- Lentes ojbetivo --
+
+
+% 	-- Porta muestras --
+En el centro de la columna se encuentra el porta muestra. 
+Sobre esta se prepara la muestra a analizar. 
+El haz de electrones atraviesa la muestra, aquí interaciona con los átomos que lo forman y luego de atravesa la muestra se obtiene el haz de electros post-interación.
+
+% Imagen del portamuestra
+
+% 	-- Lentes proyectoras --
+Debajo del portamuestra se encuentran la lentes de formación de la imágen. 
+Su tarea es enfocar ĺa funcíon de onda de salida sobre la pantalla. 
+Aquí es donde se realiza toda la magnificación.
+
+% 	-- Pantalla y cámara --
+
+
+% 	-- Discusión de las aberraciones y CTF --
+Como todas las lentes reales, estas generación aberraciones en las imágenes formadas, pero por el tipo de lentes utilizadas, no es posible fabricar lentes divergentes\footnote{Existen los llamados microscopios con aberración corregida. Utilización cuadrupolos o octupolos magnéticos para imitar el efecto de una lente divergente.}
+En los sistemas de óptica clásica se utiliza un conjunto de lentes convergentes y divergentes para evitar la formación de aberraciones.
+En contraste, al no tener lentes divergentes, la aberraciones no pueden ser totalmente corregidas mediante una disposición ingeniosa da las lentes.
+El efecto de las aberraciones sobre la imagen resultante se modela utilizando una función llamada, Contrast transfer function (CTF).
+La CTF indica como se modifica la fase y amplitud de las diferentes componentes de fourier de la función de onda de salida de la muestra al atravesar el conjunto de lentes proyectoras.
+
+[Poner alguna ecuación de la CTF]
+
+Aquí entra en juego el llamado defoco.
+Indica la distancia del plano imagen a la posición de la muestra.
+
+Entre las técnicas de microscopía de transmisión electrónica hay 3 que fueron de nuestro interés. Contrase de fase, amplitud e imágenes de alta resolución.
+
+
+
+Para caracterizar las partículas sintetizadas se utilizaron varias técnicas de microscopía de transmisión electrónica.
+El objetivo principal fue utilizar microscopía de al resolución HRTEM, para obtener información de la disposición de las fallas de apilamiento dentro de la nanopartícula.
+Lamentablemente, durante todo el trayecto del trabajo, ambos microscopios disponibles se encontraron bajo mantenimiento.
+Por lo que solo fue posible tomar imágenes en lo que se llama campo claro y campo oscuro de las nanopartículas.
+
+A pesar de estos "setbacks", utilizando imágenes de HRTEM tomados en el 2017, fue posible realizar un análisis integral de las imágenes mediante simulaciones de imágenes TEM.
+
+Se utilizó un microscopio de transmisión electrónica Philips CM200. Se tomaron imágenes tanto de alta resolución (HRTEM) como en contraste de fase.
+
+Las imágenes obtenidas mediante HRTEM son un combinación compleja de los haces de electrones difractados y transmitidos. Para analizarlas se realizaron simulaciones computacionales.
+
+% Simulaciones
+Se utilizó la librería de python ABTEM y se realizaron las simulaciones en un entorno digital google colab utilizando tarjetas gŕaficas para acelerar la computación.
+Las imágenes fueron simuladas utilizando el método \textit{multislice} para diferentes estructuras, sanguchitos de fcc con hcp en el centro.
