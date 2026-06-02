@@ -1,6 +1,7 @@
 TODO: Me está faltando meter la CTF en algún lado.
 TODO: Preguntas -> que se vuelvan respuestas.
 TODO: Ponemos algo de desarrollo de código y familiarización con otras herramientas?
+TODO: Agregar todas las citas.
 
 # Outline del informe de invesigación 1
 
