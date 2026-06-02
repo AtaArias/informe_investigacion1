@@ -11,7 +11,8 @@ TODO: Agregar todas las citas.
     - Pequeña motivación
     - Se logro sintetizar TAgNPs
     - Se observaron en el TEM
-    - S
+    - Se realizaron simulaciones
+    - 
 
 ## Introducción
 
@@ -40,6 +41,7 @@ TODO: Agregar todas las citas.
   - Reactivos
   - Procedimiento
 - Caracterización
+  - **FIGURA**: Diagrama del TEM y sus partes
   - Funcionamiento del TEM
     - Partes funcionales:
       - Sistema de vacio
@@ -50,6 +52,7 @@ TODO: Agregar todas las citas.
       - Porta muestra
       - Lente proyectora
       - Toma de imágenes
+  - **FIGURA**: Diagramas de los distintos modos de funcionamiento del TEM
   - Modos de utilización
     - HRTEM
     - Campo claro

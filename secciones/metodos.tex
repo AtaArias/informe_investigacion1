@@ -38,41 +38,31 @@ En la sección \ref{SEC:mecanismo_formacion_particulas_triangulares} se describe
 	\label{fig:esquematemtesis}
 \end{figure}
 
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{assets/TEM/modos_TEM_tesis}
-	\caption{Diagrama de los diferentes modos de imagen en TEM. (a) Campo claro. (b) Campo oscuro. (c) Contraste de fase (HRTEM) \cite{corthey2012}.}
-	\label{fig:modostemtesis}
-\end{figure}
-
 % Funcionamiento general del microscopio
-Para observar las nanopartículas individualmente es necesario disponer de un dispositivo que tenga resolución nanométrica.
+Para observar una nanopartícula es necesario disponer de un dispositivo que tenga resolución nanométrica, lo que está fuera del alcance de cualquier microscopio óptico.
 A esta escala, la mayoría de microscopios electrónicos comienzan a tener dificultades.
-Pero en particular, los microscopios de transmisión electrónica encajan bien para analizar las nanopartículas.
-Principalmente, porque para que los microscopios de transmisión electrónica funcionen correctamente es necesario que las muestras sean delgadas.
-Y algo que sería una desventaja, el pequeño tamaño de las partículas, se convierte a una conveniencia para utilizar el instrumental.
+Sin embargo, los microscopios de transmisión electrónica (TEM) encajan bien para analizar las nanopartículas.
+Principalmente, porque las muestras de TEM deben ser extremadamente delgadas.
+Y el pequeño tamaño de las partículas, que podría ser inconveniente en otro sistema, las vuelve ideales para analizar mediante TEM.
 
-Por esto, es pertinente que el lector tenga un idea básica del funcionamiento de un microscopio de transmisión electrónica.
-De forma muy simplificada, un haz de electrones atraviesa la muestra y detrás de la muestra se observa el haz de salida luego de interactuar con los átomos del espécimen. 
-En general, las técnicas de microscopia de transmisión (TEM), son de gran utilidad para analizar la estructura cristalina de los materiales.
+El TEM genera un haz de electrones atraviesa la muestra y detrás se observa el haz luego de interactuar con los átomos del espécimen. 
+En general, las técnicas de microscopia electrónica de transmisión (TEM), son de gran utilidad para analizar la estructura cristalina de los materiales.
 Ya que la longitud de onda de los electrones que conforman el haz se encuentra en el orden de los armostrong. 
 
-Todos los sistemas de funcionamiento del microscopio están alojados dentro de una columna vertical, Fig. \ref{fig:esquema_TEM}. Se distinguen 6 sistemas principales; el sistema de vacio, las lentes condensadoras, las lentes objetivo, el portamuestras, las lentes proyectoras y la pantalla.
+Todos los sistemas de funcionamiento del microscopio están alojados dentro de una columna vertical, Fig. \ref{fig:esquema_TEM}. Se distinguen 7 sistemas principales; sistema de vacío, cañón de electrones, lentes condensadoras, lentes objetivo, portamuestras, lentes proyectoras y la pantalla.
 
-Sistema de vacio.
+% Sistema de vacio - altas tensiones - iteracción electrones muestra
+Para que el haz de electrones alcance la muestra es necesario asegurarse que en todo el recorrido hasta la muestra no interaccione con ninguna molécula. Para lograrlo la columna del microscopio se mantiene en ultra alto vacío \(\sim \SI{10^{-7}}{Torr}\).
 
-Para producir el haz de electrones se utiliza cañón de electrones. 
-Existen diferentes tipos de cañones, pero se pueden diferenciar por el tamaño del haz resultante y la dispersión de energía en los electrones resultantes.
-La tecnología más simple es el cañón de tungsteno \ref{}. Se circula una corriente sobre un cable de tungsteno hasta que comienza a emitir electrones por efecto de la temperatura. Este clabe, se pone de manera que posee una punta, de donde comienza a emitir electrones. Y estos son acelerados por un potencial del orden de \qty{200}{kV}.
-Este toma imágenes de la constitución de una muestra mediante la utilización de haces de electrones que la atraviesan.
-En general los microscopios de transmisión electrónica se puedan analizar en varias secciones a lo largo de la columna que los aloja.
+% Cañón de electrones
+Para producir el haz electrónico se utiliza cañón de electrones. 
+Existen diferentes tipos de cañones en función del mecanismo de emisión, pero se pueden diferenciar por el tamaño del haz, la intensidad máxima y la dispersión de energía en los electrones resultantes. 
+La tecnología más simple es el cañón de tungsteno \ref{}. Se calienta un cable de tungsteno hasta que comienza a emitir electrones por efecto de la temperatura. Este cable, se pone de manera que posee una punta, de donde comienza a emitir electrones. Y estos son acelerados por un potencial del orden de \qty{200}{kV}. %TODO: Redactar mejor lo del tungesteno o decir menos y hablar de varios
+En función del cañón y el potencial utilizado la cámara donde se aloja el cañón suele manteres a presiones mejores que el resto de la columna.
+Hay varios tipos de cañones según el mecanismo de emisión; . La fuente del haz de electrones determina la intensidad máxima, el tamaño del haz utilizado y la dispersión en energía.
 
-% -- Rol de cada componente --
-% 	-- Fuente de electrones --
-Primer se tiene la fuente del haz de electrónes. Se tienen varios tipos según el mecanismo de emisión de electrones, la mas comunes son fuentes del tipo FG(field emission gun). La fuente del haz de electrones determina la intensidad máxima que se puede alcanzar, el tamaño del haz utilizado y finalmente la dispersión de energía del haz generado.
+Mientras "mejor" sea la fuente de electrones, mayor es la intensidad máxima de la fuente, menor es el potencial necesario para desprender electrones y menor es la dispersión de energía del haz de electrones. 
 
-Mientras "mejor" sea la fuente de electrones, mayor es la intensidad máxima de la fuente, menor es el potencial de aceleración necesario para desprender electrones y menor es la dispersión de energía del haz de electrones. 
-La dispersión en energía entra en juego más adelante cuando hablemos de el conjunto de lentes con el cual se forma la imagen.
 
 % 	-- Lentes condensadores --
 Debajo de la fuente de electrones, en la columna tenemos las lentes de alineación del haz. Con estas nos encargamos de que el haz incida de la manera que más nos convenga sobre la muestra. Y que estemos minimizando al máximo las aberraciones en la imagen resultante.
@@ -109,7 +99,13 @@ Indica la distancia del plano imagen a la posición de la muestra.
 
 Entre las técnicas de microscopía de transmisión electrónica hay 3 que fueron de nuestro interés. Contrase de fase, amplitud e imágenes de alta resolución.
 
-
+% Modos de utilización
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{assets/TEM/modos_TEM_tesis}
+	\caption{Diagrama de los diferentes modos de imagen en TEM. (a) Campo claro. (b) Campo oscuro. (c) Contraste de fase (HRTEM) \cite{corthey2012}.}
+	\label{fig:modostemtesis}
+\end{figure}
 
 Para caracterizar las partículas sintetizadas se utilizaron varias técnicas de microscopía de transmisión electrónica.
 El objetivo principal fue utilizar microscopía de al resolución HRTEM, para obtener información de la disposición de las fallas de apilamiento dentro de la nanopartícula.
