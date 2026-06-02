@@ -52,25 +52,43 @@ Ya que la longitud de onda de los electrones que conforman el haz se encuentra e
 Todos los sistemas de funcionamiento del microscopio están alojados dentro de una columna vertical, Fig. \ref{fig:esquema_TEM}. Se distinguen 7 sistemas principales; sistema de vacío, cañón de electrones, lentes condensadoras, lentes objetivo, portamuestras, lentes proyectoras y la pantalla.
 
 % Sistema de vacio - altas tensiones - iteracción electrones muestra
-Para que el haz de electrones alcance la muestra es necesario asegurarse que en todo el recorrido hasta la muestra no interaccione con ninguna molécula. Para lograrlo la columna del microscopio se mantiene en ultra alto vacío \(\sim \SI{10^{-7}}{Torr}\).
+Para que el haz de electrones alcance la muestra es necesario asegurarse que en todo el recorrido hasta la muestra no interaccione con ninguna molécula. Para lograrlo la columna del microscopio se mantiene en ultra alto vacío \(\sim 10^{-7} \, \si{Torr}\).
 
 % Cañón de electrones
 Para producir el haz electrónico se utiliza cañón de electrones. 
 Existen diferentes tipos de cañones en función del mecanismo de emisión, pero se pueden diferenciar por el tamaño del haz, la intensidad máxima y la dispersión de energía en los electrones resultantes. 
 La tecnología más simple es el cañón de tungsteno \ref{}. Se calienta un cable de tungsteno hasta que comienza a emitir electrones por efecto de la temperatura. Este cable, se pone de manera que posee una punta, de donde comienza a emitir electrones. Y estos son acelerados por un potencial del orden de \qty{200}{kV}. %TODO: Redactar mejor lo del tungesteno o decir menos y hablar de varios
-En función del cañón y el potencial utilizado la cámara donde se aloja el cañón suele manteres a presiones mejores que el resto de la columna.
-Hay varios tipos de cañones según el mecanismo de emisión; . La fuente del haz de electrones determina la intensidad máxima, el tamaño del haz utilizado y la dispersión en energía.
-
-Mientras "mejor" sea la fuente de electrones, mayor es la intensidad máxima de la fuente, menor es el potencial necesario para desprender electrones y menor es la dispersión de energía del haz de electrones. 
-
 
 % 	-- Lentes condensadores --
-Debajo de la fuente de electrones, en la columna tenemos las lentes de alineación del haz. Con estas nos encargamos de que el haz incida de la manera que más nos convenga sobre la muestra. Y que estemos minimizando al máximo las aberraciones en la imagen resultante.
+Debajo del cañón, se encuentran las lentes de alineación del haz. Con estas nos encargamos de que el haz incida de la manera que más nos convenga sobre la muestra. Y que estemos minimizando al máximo las aberraciones en la imagen resultante.
 
 %	-- Lentes ojbetivo --
 
 
 % 	-- Porta muestras --
+%TODO: Mejorar la notación - frente - espalda es muy ambígüo. Por ahí buscar algo similar a superior e inferior o distinguir por funcionalidad
+
+%TODO: Agregar escala a la imágen del portamuestras, no hace falta que sea demasiado correcta
+
+\begin{figure}
+	
+	\centering
+	\begin{subfigure}{0.7\columnwidth}
+		\centering
+		\includegraphics[width=\textwidth]{porta_muestra/frente.JPG}
+		\caption{Frente}
+	\end{subfigure}
+	
+	\begin{subfigure}{0.7\columnwidth}
+		\centering
+		\includegraphics[width=\textwidth]{porta_muestra/espalda.JPG}	
+		\caption{Expalda del portamuestras}
+	\end{subfigure}
+	
+	\caption{Foto del portamuestra utilizado. Se observa el sistema de resorte para sostener la rejilla.}
+	\label{fig:portamuestras}
+\end{figure}
+
 En el centro de la columna se encuentra el porta muestra. 
 Sobre esta se prepara la muestra a analizar. 
 El haz de electrones atraviesa la muestra, aquí interaciona con los átomos que lo forman y luego de atravesa la muestra se obtiene el haz de electros post-interación.
