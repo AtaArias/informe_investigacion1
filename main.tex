@@ -4,6 +4,8 @@
 \usepackage{lmodern}
 \usepackage[a4paper, top=2cm, bottom=2cm, left=1cm, right=1cm]{geometry}
 \usepackage{graphicx}
+\usepackage{svg}
+\svgpath{{./assets/}}
 \usepackage[spanish, es-noshorthands]{babel}
 \usepackage{biblatex}
 \usepackage{siunitx}
@@ -17,6 +19,15 @@
 \newcommand{\logoA}{\resizebox{!}{2cm}{\includegraphics{img14.jpg}}}
 \newcommand{\logoB}{\resizebox{!}{3cm}{\includegraphics{logo_ib.png}}}
 \newcommand{\logoC}{\resizebox{!}{3cm}{\includegraphics{logo_cnea.png}}}
+
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[
+	fileext=los,
+	listname={List of Schemes},
+	name=Esquema,
+	placement=tbhp,
+	within=section
+	]{scheme}
 
 % Formato de las figuras Fig. \ref{label}
 % Formato de los comentarios, un TODO por parrafo de texto a agregar y uno por figura a agregar o cambio a la figura
