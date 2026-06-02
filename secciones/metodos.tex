@@ -10,7 +10,7 @@ Para remover restos de metales de la superficie de vidrio, el material fue lavad
 %\textbf{Síntesis.}. 
 Las nanopartículas fueron sintetizadas siguiendo el proceso descrito por Zhang (2011)\cite{zhang2011}. 
 El volumen total de la solución es fijado en \qty{25}{\milli\liter}.
-Se disuelve nitrato de plata (\ce{AgNO3}, \qty{50}{\milli M}, \qty{50}{\micro\liter}), citrato de sodio (\ce{Na3C6H5O7}, \qty{75}{\milli M}, \qty{75}{\milli M}) y peróxido de hidrógeno (\ce{H2O2}, \qty{30}{wt\percent}, \qty{60}{\micro\liter}) en \qty{24.75}{\milli\liter} de agua miliq (Aclaro acá qué es el agua miliq?).
+Se disuelve nitrato de plata (\ce{AgNO3}, \qty{50}{\milli M}, \qty{50}{\micro\liter}), citrato de sodio (\ce{Na3C6H5O7}, \qty{75}{\milli M}, \qty{75}{\milli M}) y peróxido de hidrógeno (\ce{H2O2}, \qty{30}{wt\percent}, \qty{60}{\micro\liter}) en \qty{24.75}{\milli\liter} de agua ultra pura (\SI{18}{\mega\ohm}).
 Luego se añade Borohidruro de sodio (\ce{NaBH4}, \qty{100}{mM}, \qty{250}{\micro L}) a la solución bajo agitación.
 Inmediatamente tornándose de un color amarillo claro. 
 Unos minutos después la solución cambia a amarillo oscuro, rojo, verde y azul sucesivamente.
@@ -19,19 +19,12 @@ Es decir, controlando el tamaño y forma de las nanopartículas.
 
 En la sección \ref{SEC:mecanismo_formacion_particulas_triangulares} se describe en rol de cada reactivo en la formación de las AgNPs.
 
-
-
-
-%(Por qué necesito fallas de tipo twin? Cómo controlo el espesor? Por qué son de espesores similares si dejen de crecer en teoría cuando se le adhiere un capping agent a la superficie)
-
-%Poner algún diagramita de que es lo que sucede
-
 \subsection{Caracterización de las nanopartículas.}
 %TODO: Seguir el orden que usa Gastón para explicar el funcionamiento del TEM. Por ahí profundizar un poco más. 
 % No hace falta que todo sea seco, hay que meterle un poco de varieté
 
 % Esquema sacado de la tesis doctoral de Gastón Corthey 2012
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{./TEM/esquema_TEM_tesis}
 	\caption{Esquema de un microscopio electrónico de transmisión (TEM) convencional con cañón de electrones de emisión termoiónica de LaB6 \cite{corthey2012}. } 
@@ -40,11 +33,11 @@ En la sección \ref{SEC:mecanismo_formacion_particulas_triangulares} se describe
 
 % Funcionamiento general del microscopio
 Para observar una nanopartícula es necesario disponer de un dispositivo que tenga resolución nanométrica, lo que está fuera del alcance de cualquier microscopio óptico.
-A esta escala, la mayoría de microscopios electrónicos comienzan a tener dificultades.
-Sin embargo, los microscopios de transmisión electrónica (TEM) encajan bien para analizar las nanopartículas.
-Principalmente, porque las muestras de TEM deben ser extremadamente delgadas.
-Y el pequeño tamaño de las partículas, que podría ser inconveniente en otro sistema, las vuelve ideales para analizar mediante TEM.
+Además, a esta escala la mayoría de microscopios electrónicos comienzan a tener dificultades.
+Sin embargo, los microscopios electrónicos de transmisión (TEM) se adecúan bien al análisis de nanopartículas.
+Las muestras de TEM deben ser extremadamente delgadas y el pequeño tamaño de las partículas, que podría ser inconveniente en otro sistema, las vuelve ideales para analizar mediante TEM.
 
+En microscopia electrónica de transmisión se incide sobre una muestra con un haz de electrones de alta energía. 
 El TEM genera un haz de electrones atraviesa la muestra y detrás se observa el haz luego de interactuar con los átomos del espécimen. 
 En general, las técnicas de microscopia electrónica de transmisión (TEM), son de gran utilidad para analizar la estructura cristalina de los materiales.
 Ya que la longitud de onda de los electrones que conforman el haz se encuentra en el orden de los armostrong. 
@@ -62,8 +55,8 @@ La tecnología más simple es el cañón de tungsteno \ref{}. Se calienta un cab
 % 	-- Lentes condensadores --
 Debajo del cañón, se encuentran las lentes de alineación del haz. Con estas nos encargamos de que el haz incida de la manera que más nos convenga sobre la muestra. Y que estemos minimizando al máximo las aberraciones en la imagen resultante.
 
-%	-- Lentes ojbetivo --
-
+%	-- Lentes objetivo --
+Luego de ser condensado el haz recorre la lentes objetivo, las cuales se encargan de enfocar el haz sobre la muestra. Aquí es donde aparecen los 
 
 % 	-- Porta muestras --
 %TODO: Mejorar la notación - frente - espalda es muy ambígüo. Por ahí buscar algo similar a superior e inferior o distinguir por funcionalidad
@@ -82,25 +75,26 @@ Debajo del cañón, se encuentran las lentes de alineación del haz. Con estas n
 	\begin{subfigure}{0.7\columnwidth}
 		\centering
 		\includegraphics[width=\textwidth]{porta_muestra/espalda.JPG}	
-		\caption{Expalda del portamuestras}
+		\caption{Espalda del portamuestras}
 	\end{subfigure}
 	
 	\caption{Foto del portamuestra utilizado. Se observa el sistema de resorte para sostener la rejilla.}
 	\label{fig:portamuestras}
 \end{figure}
 
-En el centro de la columna se encuentra el porta muestra. 
+% TODO: Redactar el armado del portamuestras
+En el centro de la columna se encuentra el porta muestra Fig. \ref{fig:portamuestras}. 
 Sobre esta se prepara la muestra a analizar. 
-El haz de electrones atraviesa la muestra, aquí interaciona con los átomos que lo forman y luego de atravesa la muestra se obtiene el haz de electros post-interación.
-
-% Imagen del portamuestra
+El haz de electrones atraviesa la muestra, aquí interaciona con los átomos que lo forman y detrás se obtiene el haz de electros post-interación.
 
 % 	-- Lentes proyectoras --
-Debajo del portamuestra se encuentran la lentes de formación de la imágen. 
-Su tarea es enfocar ĺa funcíon de onda de salida sobre la pantalla. 
+Debajo del portamuestra se encuentran la lentes que forman la imágen. 
+Su tarea es enfocar el haz de salida sobre la pantalla. 
 Aquí es donde se realiza toda la magnificación.
 
 % 	-- Pantalla y cámara --
+% TODO: Agregar él modelo de la cámara.
+La columna posee una pantalla fluorescente para analizar las imágenes en vivo y también posée de una cámara CCD Gatan no se cuanto.
 
 
 % 	-- Discusión de las aberraciones y CTF --
