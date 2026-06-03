@@ -119,43 +119,55 @@ No existen las lentes perfectas, todas presentan aberraciones de distinto tipo. 
 Estas aberraciones son las que finalmente ponen el límite de resolución de un microscopio de transmisión electrónica. El efecto de las aberraciones sobre la imagen final se modela utilizando la función de transferencia de contraste (CTF), que indica como se modifica cada componente de la imagen en el espacio recíproco.
 
 % Hablar de la CTF
-La CTF está definida como 
+La CTF se define como
+\[CTF(k, \phi) = exp(-i \chi (k, \phi)) E_t(k) E_s(k) A(k),\]
 
-\[CTF(k, \phi) = exp(-i \chi (k, \phi)) E_t(k) E_s(k) A(k)\]
+De manera que $\chi$ agrega un factor de fase y $E_t$, $E_s$ y $A$ modulan la intensidad.
 
-Las aberraciones introducen un factor de fase extra en la función de onda de salida \(exp(-i \chi (k, \phi))\). Donde 
+El factor de fase $\chi$ a primer orden se puede expresar como
 \[\chi(k, \phi) \approx \frac{2 \pi}{\lambda} \left(\frac{\lambda^2 k^2}{2} \Delta f + \frac{\lambda^4 k^4}{4} C_s \right).\] 
-Siendo $\lambda$ la longitud de ondas de los electrones, $k$ el número de onda de la función, $\Delta f$ el defoco de la lente objetivo, es decir, la distancia del punto pocal a la posición del objeto y $C_s$ la aberración esférica. 
+Siendo $\lambda$ la longitud de onda de los electrones, $k$ el número de onda de la función, $\Delta f$ el defoco de la lente objetivo, es decir, la distancia del punto focal a la posición del objeto y $C_s$ la aberración esférica. 
 
-Luego, la dispersión en energía y la desviación angular de los electrones incidentes aportan factores de modulación a la onda final. Al factor asociado a la dispersión de energía se lo llama coherencia temporal, 
-\[E_t = exp \left( - \frac{1}{4} (\pi \lambda \delta )^2 k^4 \right)\]. Aquí $\delta$ es un factor que aumenta con la aberración cromática y dispersión de energía, tensión de aceleración y corriente en las lentes.
+Los otros tres factores son todos menores o iguales a 1. En particular, \(E_t(k)\), llamado coherencia temporal, decrece exponencialmente al aumentar $k$ y depende de la dispersión de energía de los electrones emitidos. A mayor dispersión de energía antes cae la intensidad.
+La coherencia espacial, \(E_s(k)\), también decrece exponencialmente con $k$ y depende de la dispersión angular de los electrones que inciden con la muestra. Y finalmente, \(A(k)\) representa una apertura en el plano focal, de manera que \(A(k)\) es 0 para todo $k > k_{max}$.
 
+Para interpretar las imágenes de la manera mas simple posible se suele elegir un defoco que tenga un defase constante para $k$ cercanos. Este es el defoco de Scherzer. En la figura \ref{fig:ctf} se muestra la componente imaginaria de la CTF del microscopio Philips CM200-UT en el defoco de Scherzer.
 
-Y al factor asociado con la dispersión angular se llama coherencia espacial, 
-\[E_s = exp \left(- \frac{\beta}{4\lambda^2} \left| \frac{\partial \chi (k)}{\partial k} \right|^2 \right) \], con $\beta$ la dispersión angular de los electrones.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{TEM/ctf_scherzer_cm200.png}
+	\label{fig:ctf}
+	\caption{Perfil de la CTF en función de el número de onda para el microscopio Philips CM200-UT en el defoco de Scherzer. Se muestran los aportes de la envolvente temporal (temporal envelope) en verde y espacial (spatial envelope) en naranja. Como es usual se grafica la componente imaginaria de la CTF.}
+\end{figure}
+%Luego, la dispersión en energía y la desviación angular de los electrones incidentes aportan factores de modulación a la onda final. Al factor asociado a la dispersión de energía se lo llama coherencia temporal, 
+%\[E_t = exp \left( - \frac{1}{4} (\pi \lambda \delta )^2 k^4 \right)\]. Aquí $\delta$ es un factor que aumenta con la aberración cromática y dispersión de energía, tensión de aceleración y corriente en las lentes.
+%
+%Y al factor asociado con la dispersión angular se llama coherencia espacial, 
+%\[E_s = exp \left(- \frac{\beta}{4\lambda^2} \left| \frac{\partial \chi (k)}{\partial k} \right|^2 \right) \], con $\beta$ la dispersión angular de los electrones.
 
-El último factor a tener en cuenta es el de alguna apertura en el plano focal, tal que solo se observan ciertas componentes de la onda de salida. Aporta un factor 
-
-\begin{equation}
-A(k) = 
-\left\{
-	\begin{array}{cc}
-		1 & \quad k \leq k_{max} \\
-		
-		0 & \quad k \geq k_{max}
-	\end{array}
-\right\}
-\end{equation}
-
-El aporte de estos tres factores en conjunto se llama, función de contraste de transferencia, o CTF,
+%El último factor a tener en cuenta es el de alguna apertura en el plano focal, tal que solo se observan ciertas componentes de la onda de salida. Aporta un factor 
+%
+%\begin{equation}
+%A(k) = 
+%\left\{
+%	\begin{array}{cc}
+%		1 & \quad k \leq k_{max} \\
+%		
+%		0 & \quad k \geq k_{max}
+%	\end{array}
+%\right\}
+%\end{equation}
+%
+%El aporte de estos tres factores en conjunto se llama, función de contraste de transferencia, o CTF,
 
 Tomando todos los factores en cuenta, la función de onda deja la muestra \(\psi_{salida}\) y la función de onda que llega a la pantalla \(\psi_{pantalla}\) están relacionadas por
 \[
-	\psi_{k,\phi,pantalla} = \psi_{salida} CTF(k,\phi),
+	\psi_{k,\phi,pantalla} = \psi_{salida} CTF(k,\phi).
 \]
 
-Para aplicar el desfase hay que descomponer la función de salida en sus componentes de fourier y aplicar el desfaze individualmente.
+Para aplicar el desfase hay que descomponer la función de salida en sus componentes de Fourier y aplicar el desfase individualmente.
 
+En practica, valores negativos de la ctf indican que la componente se ve blanca sobre un fondo negro y positivos que la componente se verá negra sobre un fondo blanco. Si el valor es 0 no se distingue la componente del fondo. Con estos conceptos el defoco de Schezer es el defoco en el que la mayor cantidad de planos de difracción están en la misma condición de contraste.
 
 \subsubsection{Modos de operación del microscopio para adquirir imágenes.}
 Entre las técnicas de microscopía de transmisión electrónica hay 3 que se utilizan en el trabajo. Campo de claro, campo oscuro y contraste de fase (HRTEM).
@@ -176,7 +188,7 @@ Entre las técnicas de microscopía de transmisión electrónica hay 3 que se ut
 %A pesar de estas complicaciones, utilizando imágenes de HRTEM tomados en el 2017, fue posible realizar un análisis integral de las imágenes mediante simulaciones de imágenes TEM.
 
 % Mostrar alguna imagen de seto
-Luego de la muestra se forman dos planos que pueden ser proyectados sobre la pantalla. El plano imagen y el plano focal. Sobre el plano imágen se observa el espacio real. Sobre el plano focal se observa el espacio recíproco donde se obtiene el patrón de difracción de los electrones que atraviezan la muestra. 
+Luego de la muestra se forman dos planos que pueden ser proyectados sobre la pantalla. El plano imagen y el plano focal. Sobre el plano imágen se observa el espacio real. Sobre el plano focal se observa el espacio recíproco donde se obtiene el patrón de difracción de los electrones que atraviesan la muestra. 
 
 En la figura \ref{fig:modostemtesis} se muestra como se puede modificar el modo de formación de las imagenes introduciendo una ``apertura de objetivo'' a la altura del plano focal. En el modo de \textbf{campo claro} se coloca la apertura que bloquea el paso de los haces difractados y permitiendo pasar solo los haces ``directos'' que no sufrieron difracción. En este caso, las particulas se observan negras o grises (dependiendo de la orientación de los planos del cristal) sobre un fondo claro correspondiente al sustrato amorfo. En modo \textbf{campo oscuro} se mueve la apertura para seleccionar y permitir pasar algunos haces difractados. Aquí entonces, se observan más brilantes las zonas de la muestra donde la orientación de los planos cristalinos se encuentran en condición de Bragg difractando en la dirección de la apertura. En modo \textbf{contraste de fase}, o de alta resolución, no se colocan aperturas y se proyectan todos los haces sobre la pantalla.
 
