@@ -24,11 +24,14 @@ En la sección \ref{SEC:mecanismo_formacion_particulas_triangulares} se describe
 Para observar una nanopartícula es necesario disponer de un dispositivo que tenga resolución nanométrica, lo que está fuera del alcance de cualquier microscopio óptico.
 Además, a esta escala la mayoría de microscopios electrónicos comienzan a tener dificultades.
 Sin embargo, los microscopios electrónicos de transmisión (TEM) se adecúan bien al análisis de nanopartículas.
-Las muestras de TEM deben ser extremadamente delgadas y el pequeño tamaño de las partículas, que podría ser inconveniente en otro sistema, las vuelve ideales para el método.
+Las muestras de TEM deben ser extremadamente delgadas (<\qty{150}{\nano\meter}) y el pequeño tamaño de las partículas, que podría ser inconveniente en otro sistema, las vuelve ideales para el método.
+
+Las particulas fueron depositadas por goteo de la suspensión (\textit{drop casting}) sobre una grilla de cobre de 200 mesh con sustrato de formvar.
 
 \subsubsection{Microscopio electrónico de transmisión}
 %TODO: Seguir el orden que usa Gastón para explicar el funcionamiento del TEM. Por ahí profundizar un poco más. 
 % No hace falta que todo sea seco, hay que meterle un poco de varieté
+En este trabjo se empleó el microscopio Phillips CM200-UT del Laboratorio de Microscopia Electrónica de Transmisión del Departamento de Materiales Funcionales y Estructurales.
 
 % Esquema sacado de la tesis doctoral de Gastón Corthey 2012
 \begin{figure}[h]
@@ -45,28 +48,28 @@ Todos los sistemas de funcionamiento del microscopio están alojados dentro de u
 
 % Sistema de vacio - altas tensiones - iteracción electrones muestra
 % TODO: Qué cañones de electrones necesitan estar a una presión menor?
-Para que el haz de electrones alcance la muestra es necesario asegurarse que en todo el recorrido hasta la muestra no interaccione con ninguna molécula. Para lograrlo, la columna del microscopio se mantiene en \textbf{ultra alto vacío}, \(\sim 10^{-7} \, \si{Torr}\). Además, ciertos cañones de electrones, por usar un potencial alto y confinado, tienen que estar a una presión aún menor para funcionar correctamente. El vacío se genera utilizando una bomba mecánica para vaciar a altas presiones, una difusora hasta alto vacío y una bomba de ionización para alcanzar ultra alto vacío.
+Para que el haz de electrones alcance la muestra es necesario asegurarse que en todo el recorrido hasta la muestra no interaccione con ninguna molécula. Para lograrlo, la columna del microscopio se mantiene en \textbf{ultra alto vacío}, \(< 10^{-7} \, \si{Torr}\). Además, ciertos cañones de electrones, por usar un potencial alto y confinado, tienen que estar a una presión aún menor para funcionar correctamente. El vacío se alcanza en etapas utilizando una bomba mecánica, una difusora de aceite (ODP) hasta alto vacío y una bomba de iónica (IGP) para alcanzar ultra alto vacío.
 
 % Cañón de electrones
 % TODO: Explico un poco cada mecanismo? O los comparo en alguna cantidad?
 % No estoy seguro de como distinguir cada parte, la letra en negrita es suplementario
-\textbf{Cañón de electrones}. Se encuentra sobre la columna y se encarga de generar el haz. Existen diferentes tipos en función del mecanismo de emisión; cable de Tungsteno, cristal de \ce{LaB6} y FEG. Los haces resultantes se diferencian por el tamaño, la intensidad máxima y la dispersión de energía. Una vez desprendidos los electrones, son acelerados mediante una potencial electrostático de \(\sim \SI{200}{\kilo \volt}\), cuyo valor determina la longitud de onda de los electrones emitidos. Así como también controla el daño por \textit{knock-on} que va a sufrir la muestra. % Comentario de valores usuales o solo pongo lo que usamos?
+\textbf{Cañón de electrones}. Se encuentra sobre la columna y se encarga de generar el haz. Existen diferentes tipos en función del mecanismo de emisión; filamento de Tungsteno, cristal de \ce{LaB6} y FEG. Los haces resultantes en cada caso se diferencian por el tamaño, brillo (flujo por ángulo sólido) que se relaciona con la intensidad máxima y la dispersión de energía. Una vez desprendidos los electrones, son acelerados mediante un potencial electrostático de \(\sim\)\qty{200}{\kilo\volt}, cuyo valor determina la longitud de onda de los electrones emitidos.% Así como también controla el daño por \textit{knock-on} que va a sufrir la muestra. % Comentario de valores usuales o solo pongo lo que usamos?
 
 % 	-- Porta muestras --
 %TODO: Mejorar la notación - frente - espalda es muy ambígüo. Por ahí buscar algo similar a superior e inferior o distinguir por funcionalidad
 %TODO: Agregar una imágen del portamuestras entero al costado que se vea todo el sistema a lo largo.
-\begin{figure}
+\begin{figure}[t]
 	\centering
 	\begin{subfigure}{0.7\columnwidth}
 		\centering
 		\includegraphics[width=\textwidth]{porta_muestra/frente.JPG}
-		\caption{Frente}
+		\caption{Posición para colocar la muestra}
 	\end{subfigure}
 	
 	\begin{subfigure}{0.7\columnwidth}
 		\centering
 		\includegraphics[width=\textwidth]{porta_muestra/espalda.JPG}	
-		\caption{Espalda del portamuestras}
+		\caption{Posición invertida, tal como se encuentra una vez ingresado a la columna del microscopio.}
 	\end{subfigure}
 	
 	\caption{Imagen del portamuestras utilizado. Se observa el sistema de resorte para sostener la grilla.}
@@ -74,30 +77,30 @@ Para que el haz de electrones alcance la muestra es necesario asegurarse que en 
 \end{figure}
 
 % TODO: Redactar la preparación de la muestra, se hace en resultados o lo ponemos acá en métodos?
-\textbf{Portamuestras}. Colocado en el centro de la columna y rodeado por la lente objetivo. Hay varios diseños en función de las propiedades a medir y según como se necesite manipular el espécimen. El que se utiliza para observar las nanopartículas, Fig. \ref{fig:portamuestras}, consiste de una base circular de metal donde se apoya la grilla con muestra y una ``arandela'' que la sostiene. Permite mover la grilla en varios ejes con precisión del \(\AA\).
+\textbf{Portamuestras}. Se utilizó un portamuestra \textit{``double-tilt''} analítico (bajo fondo) como el que se muestra en la figura \ref{fig:portamuestras}. Ese portamuestra tiene una base de Berilio sobre la que se coloca la grilla, se soporta con una arandela y se sujeta con un clip de tres patas. Colocado en el centro de la columna y rodeado por la lente objetivo. %Hay varios diseños en función de las propiedades a medir y según como se necesite manipular el espécimen. El que se utiliza para observar las nanopartículas, Fig. \ref{fig:portamuestras}, consiste de una base circular de metal donde se apoya la grilla con muestra y una ``arandela'' que la sostiene. %Permite mover la grilla en varios ejes con precisión del \(\AA\).
 
 % Sistema de lentes 
 % Se podría agregar algo de como funciona una lente en general antes de pasar a epxlicar los diferentes roles que cumplen.
-A lo largo de la columna se encuentran varias lentes de electrones. Se separan en 3 tipos por la función que cumplen; condensadoras, objetivo y proyectoras. 
+\textbf{Aperturas}. A lo largo de la columna se encuentran varias lentes de electrones. Se separan en 3 tipos por la función que cumplen; condensadoras, objetivo y proyectoras. 
 
 \textbf{Lentes condesadoras}.
-Colocadas debajo del cañón. Su labor principal es alinear el haz dentro de la columna. Con estas se alinea el haz sobre el eje de la columna. Utilizan corrientes de \(\sim \SI{2}{\ampere}\).
+Colocadas debajo del cañón. Su labor principal es modificar la convergencia del haz de electrones y por lo tanto si intensidad. Con estas se alinea el haz sobre el eje de la columna. Utilizan corrientes de \(< \qty{2}{\ampere}\).
 
 % Por qué debía ser tan chica la distancia focal? Disminuir aberraciones?
 \textbf{Lentes objetivo}.
-Están luego de las condensadoras. Convergen el haz de electrones sobre la muestra. Su distancia focal es chica, \(\sim \SI{5}{mm}\) y lleva a que el portamuestras se coloque directamente ``dentro'' de la lente. Para alcanzar esta distancia focal utiliza una corriente de \SI{12}{\ampere}. 
+Están luego de las condensadoras. Convergen el haz de electrones sobre la muestra. Su distancia focal es chica, \(\sim \qty{5}{\milli\meter}\) y lleva a que el portamuestras se coloque directamente ``dentro'' de la lente. Para alcanzar esta distancia focal utiliza una corriente de \(\sim\)\qty{12}{\ampere}. 
 
 \textbf{Lentes proyectoras}.
-Debajo del portamuestra se encuentran las lentes que forman la imagen. Como lo indica su nombre proyectan la imagen sobre la pantalla. La mayor parte de la magnificación se realiza aquí. Utilizan corrientes de \(\sim \SI{2}{\ampere}\).
+Debajo del portamuestra se encuentran las lentes que forman la imagen. Como lo indica su nombre proyectan la imagen sobre la pantalla. La mayor parte de la magnificación se realiza aquí. Utilizan corrientes de \(< \qty{2.5}{\ampere}\).
 
 % 	-- Pantalla y cámara --
 La columna posee una \textbf{pantalla fluorescente} para analizar las imágenes en vivo y debajo de la pantalla se coloca una cámara digital, usualmente CCD, para realizar el registro de los datos.
 
-Ademas, se dispone de un sistema de aperturas que permiten colimar el haz/imagen en diferentes planos dentro de la columna.
+%Ademas, se dispone de un sistema de aperturas que permiten colimar el haz/imagen en diferentes planos dentro de la columna.
 
 % 	-- Discusión de las aberraciones y CTF --
 % Cómo cito las figuras del doctorado? solo con \cite o las incluyo en el texto?
-\subsubsection{Aberraciones}
+\subsubsection{Aberraciones en las lentes magnéticas}
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{assets/TEM/aberraciones}
@@ -108,15 +111,15 @@ Ademas, se dispone de un sistema de aperturas que permiten colimar el haz/imagen
 % Mencionar algo de microscopios corregidos
 % TODO agrega la cita de que no existen las lentes divergentes. Cual libro de microscopia debería funcionar
 % Ver como mencionar lo de los microscopios corregidos si es que se menciona. Decimos que son muy caros, o algo de que no están a nuestro alcance todavía?
-No existen las lentes perfectas, todas presentan aberraciones de distinto tipo. Si la distancia focal varia el parámetro de impacto se le llama aberración esférica. Si la distancia focal varía con la longitud de onda se le llama aberración cromática. En un sistema óptico clásico las aberraciones son corregidas utilizando un arreglo de lentes convergentes y divergentes. Sin embargo, no se pueden fabricar lentes de electrones simétricas divergentes. Recientemente se han fabricado TEMs corregidos, que utilizan lentes asimétricas para obtener reproducir el efecto de una lente divergente y así corregir la aberración. Pero la aparición de aberraciones en TEMs clásicos es inevitable \cite{}. 
+No existen las lentes perfectas, todas presentan aberraciones de distinto tipo. La aberración esférica de la lente genera que el haz de electrones intersecte el eje óptico en un rango de distancia y no en un punto focal (figura \ref{fig:aberraciones}a). Se denomina aberración cromátca cuando los haces con diferente energía (diferente longitud de onda) se deflectan en diferentes distancias a lo largo del eje óptico (figura \ref{fig:aberraciones}b). En un sistema óptico clásico (luz y lentes de vidrio) las aberraciones son corregidas utilizando un arreglo de lentes convergentes y divergentes. Sin embargo, no se pueden fabricar lentes de electrones simétricas divergentes. A principios de los años 2000s se han fabricado TEMs corregidos, que utilizan lentes asimétricas para reproducir el efecto de una lente divergente y así corregir las aberraciones. %Pero la aparición de aberraciones en TEMs clásicos es inevitable \cite{}. 
 
 % Podría poner acá la ecuación del límite de información.
 Estas aberraciones son las que finalmente ponen el límite de resolución de un microscopio de transmisión electrónica. El efecto de las aberraciones sobre la imagen final se modela utilizando la función de transferencia de contraste (CTF), que indica como se modifica cada componente de la imagen en el espacio recíproco.
 
 % Hablar de la CTF
 
-\subsubsection{Métodos de uso del microscopio.}
-Entre las técnicas de microscopía de transmisión electrónica hay 3 que se utilizan en el trabajo. Campo de fase, contraste de fase (HRTEM) y difracción de campo.
+\subsubsection{Modos de operación del microscopio para adquirir imágenes.}
+Entre las técnicas de microscopía de transmisión electrónica hay 3 que se utilizan en el trabajo. Campo de claro, campo oscuro y contraste de fase (HRTEM).
 
 % Modos de utilización
 \begin{figure}[h]
@@ -134,18 +137,18 @@ Entre las técnicas de microscopía de transmisión electrónica hay 3 que se ut
 %A pesar de estas complicaciones, utilizando imágenes de HRTEM tomados en el 2017, fue posible realizar un análisis integral de las imágenes mediante simulaciones de imágenes TEM.
 
 % Mostrar alguna imagen de seto
-Luego de la muestra se forman dos planos que pueden ser proyectados sobre la pantalla. El plano imagen y el plano recíproco. Sobre el plano imágen se observa el espacio real. Sobre el plano recíproco se identifican los haces difractados por la muestra. 
+Luego de la muestra se forman dos planos que pueden ser proyectados sobre la pantalla. El plano imagen y el plano focal. Sobre el plano imágen se observa el espacio real. Sobre el plano focal se observa el espacio recíproco donde se obtiene el patrón de difracción de los electrones que atraviezan la muestra. 
 
-En el modo de \textbf{campo claro} se coloca una \ref{fig:modostemtesis}(a) apertura que permite pasar solo los haces transmitidos. En modo \textbf{difracción de campo} se observan los haces difractados correspondientes a una sola zona del plano real. En modo \textbf{contraste de fase}, o de alta resolución, no se colocan aperturas y se proyectan todos los haces sobre la pantalla.
+En la figura \ref{fig:modostemtesis} se muestra como se puede modificar el modo de formación de las imagenes introduciendo una ``apertura de objetivo'' a la altura del plano focal. En el modo de \textbf{campo claro} se coloca la apertura que bloquea el paso de los haces difractados y permitiendo pasar solo los haces ``directos'' que no sufrieron difracción. En este caso, las particulas se observan negras o grises (dependiendo de la orientación de los planos del cristal) sobre un fondo claro correspondiente al sustrato amorfo. En modo \textbf{campo oscuro} se mueve la apertura para seleccionar y permitir pasar algunos haces difractados. Aquí entonces, se observan más brilantes las zonas de la muestra donde la orientación de los planos cristalinos se encuentran en condición de Bragg difractando en la dirección de la apertura. En modo \textbf{contraste de fase}, o de alta resolución, no se colocan aperturas y se proyectan todos los haces sobre la pantalla.
 
 % TODO: poner el nombre correcto de los microscopios
-En el centro de trabajo se dispone de dos microscopios electrónicos de tranmisión, un PHILIPS CM200 UT y un TECNAI. Lamentablemente, al momento de realizar el trabajo ambos entrar en reparación, por lo que solo se pudo tomar un conjunto de imágenes usando el CM200.
+\textbf{NOTA}
+El laboratorio de microscopia electrónica de transmisión del CAB cuenta condos microscopios electrónicos de tranmisión: un PHILIPS CM200 UT con emisión termoiónico \ce{LaB6} y un FEI Tecnai F20 G2 con emisor de campo (FEG, Schotky). Lamentablemente, al momento de realizar el trabajo ambos equipos sufrieron fallas de funcionamiento y aún se encuentran en reparación. Solamente se puedieron tomar algunas imágenes para caracterizar la AgTNPs sintetizadas con el equipo Phillips CM200.
 
 % Simulaciones
 \subsubsection{Simulaciones de HRTEM}
 
-Las imágenes obtenidas mediante HRTEM son un combinación compleja de los haces de electrones difractados y transmitidos. Para analizarlas se realizaron simulaciones computacionales.
+Dado que las imágenes de HRTEM se obtienen por contraste de fase de las ondas de electrones que atraviesan la muestra no son de interpretación directa. Para interpretarlas correctamente es necesario realizar simulaciones computacionales.
 
-
-Se utilizó la librería de python ABTEM y se realizaron las simulaciones en un entorno digital google colab utilizando tarjetas gŕaficas para acelerar la computación.
+Se utilizó la librería de python \verb|abTEM| y se realizaron las simulaciones en un entorno digital google colab utilizando tarjetas gŕaficas para acelerar la computación.
 Las imágenes fueron simuladas utilizando el método \textit{multislice} para diferentes estructuras, sanguchitos de fcc con hcp en el centro.
