@@ -119,6 +119,43 @@ No existen las lentes perfectas, todas presentan aberraciones de distinto tipo. 
 Estas aberraciones son las que finalmente ponen el límite de resolución de un microscopio de transmisión electrónica. El efecto de las aberraciones sobre la imagen final se modela utilizando la función de transferencia de contraste (CTF), que indica como se modifica cada componente de la imagen en el espacio recíproco.
 
 % Hablar de la CTF
+La CTF está definida como 
+
+\[CTF(k, \phi) = exp(-i \chi (k, \phi)) E_t(k) E_s(k) A(k)\]
+
+Las aberraciones introducen un factor de fase extra en la función de onda de salida \(exp(-i \chi (k, \phi))\). Donde 
+\[\chi(k, \phi) \approx \frac{2 \pi}{\lambda} \left(\frac{\lambda^2 k^2}{2} \Delta f + \frac{\lambda^4 k^4}{4} C_s \right).\] 
+Siendo $\lambda$ la longitud de ondas de los electrones, $k$ el número de onda de la función, $\Delta f$ el defoco de la lente objetivo, es decir, la distancia del punto pocal a la posición del objeto y $C_s$ la aberración esférica. 
+
+Luego, la dispersión en energía y la desviación angular de los electrones incidentes aportan factores de modulación a la onda final. Al factor asociado a la dispersión de energía se lo llama coherencia temporal, 
+\[E_t = exp \left( - \frac{1}{4} (\pi \lambda \delta )^2 k^4 \right)\]. Aquí $\delta$ es un factor que aumenta con la aberración cromática y dispersión de energía, tensión de aceleración y corriente en las lentes.
+
+
+Y al factor asociado con la dispersión angular se llama coherencia espacial, 
+\[E_s = exp \left(- \frac{\beta}{4\lambda^2} \left| \frac{\partial \chi (k)}{\partial k} \right|^2 \right) \], con $\beta$ la dispersión angular de los electrones.
+
+El último factor a tener en cuenta es el de alguna apertura en el plano focal, tal que solo se observan ciertas componentes de la onda de salida. Aporta un factor 
+
+\begin{equation}
+A(k) = 
+\left\{
+	\begin{array}{cc}
+		1 & \quad k \leq k_{max} \\
+		
+		0 & \quad k \geq k_{max}
+	\end{array}
+\right\}
+\end{equation}
+
+El aporte de estos tres factores en conjunto se llama, función de contraste de transferencia, o CTF,
+
+Tomando todos los factores en cuenta, la función de onda deja la muestra \(\psi_{salida}\) y la función de onda que llega a la pantalla \(\psi_{pantalla}\) están relacionadas por
+\[
+	\psi_{k,\phi,pantalla} = \psi_{salida} CTF(k,\phi),
+\]
+
+Para aplicar el desfase hay que descomponer la función de salida en sus componentes de fourier y aplicar el desfaze individualmente.
+
 
 \subsubsection{Modos de operación del microscopio para adquirir imágenes.}
 Entre las técnicas de microscopía de transmisión electrónica hay 3 que se utilizan en el trabajo. Campo de claro, campo oscuro y contraste de fase (HRTEM).
@@ -150,7 +187,15 @@ El laboratorio de microscopia electrónica de transmisión del CAB cuenta condos
 % Simulaciones
 \subsubsection{Simulaciones de HRTEM}
 
+% Modos de utilización
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{assets/NPs/Vista_lateral.png}
+	\caption{Ejemplo de una estructura con fallas de apilamiento.}
+	\label{fig:estructurasim}
+\end{figure}
+
 Dado que las imágenes de HRTEM se obtienen por contraste de fase de las ondas de electrones que atraviesan la muestra no son de interpretación directa. Para interpretarlas correctamente es necesario realizar simulaciones computacionales.
 
-Se utilizó la librería de python \verb|abTEM| y se realizaron las simulaciones en un entorno digital google colab utilizando tarjetas gŕaficas para acelerar la computación.
-Las imágenes fueron simuladas utilizando el método \textit{multislice} para diferentes estructuras, sanguchitos de fcc con hcp en el centro.
+Las simulaciones se realizaron utilizando la librería de python de código libre \verb|abTEM|. Y para acelerar su cómputo, el código fue ejecutado en el entorno digital \href{https://colab.research.google.com}{google colab} utilizando tarjetas gráficas.
+Las imágenes fueron simuladas utilizando el método \textit{mutltislice} para diferentes estructuras. Las estructuras se formaron apilando planos "ABC" para generar zonas con estructura fcc intercaladas por zonas de estructura hcp, como se muestra en la figura \ref{fig:estructurasim}
