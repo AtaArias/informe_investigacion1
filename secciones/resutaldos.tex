@@ -1,42 +1,21 @@
 \section{Resultados y discusión}
-% El nombre del archivo es resutaldos.tex ... demasiado tarde para cambiarlo ya jasjjsjs
-% Resultados:
-% - Soluciones logradas
-% - Lo que se pudo hacer con lo que tomamos
-% - Campo Claro
-% - HRTEM
-% - Imágenes viejas
-% - Simulaciones que replican las imágenes viejas
-% - Comparación entre los dos
-% - Comparación de los perfiles
-
-% Pondria arriba una imagen de la muestra y al lado las imágenestem ue le corresponden,
-% O sino para que no se confundan de a que solución corresponde pondría en una sección las imágenes de las
-% 	soluciones y por otra parte las imágenes tem, pero me parece que da para ponerlas en la parte de arrbia de la página 
-% 	y con un buen epígrafe
 
 \subsection{Mecanismo de formación de los AgTNPs}\label{SEC:mecanismo_formacion_particulas_triangulares}
-
-%(Por qué necesito fallas de tipo twin? Cómo controlo el espesor? Por qué son de espesores similares si dejen de crecer en teoría cuando se le adhiere un capping agent a la superficie)
-
-%Poner algún diagramita de que es lo que sucede
-
-% Conectar el procedimiento con la explicación de los roles
 
 \begin{scheme}
 	\centering \scriptsize \sffamily
 	\includesvg[width=\linewidth]{NPs/reaccion}
-	\caption{formación de AgTNPs. En la primer etapa se forman partículas muy pequeñas que actúan como semillas y luego crecen adoptando formas triangulares o hexagonales.}
+	\caption{Formación de AgTNPs. En la primer etapa se forman partículas muy pequeñas que actúan como semillas y luego crecen adoptando formas triangulares o hexagonales. El \ce{NaBH4} reduce los iones plata \ce{A+} y comienza a formar semillas. El \ce{H2O2} oxida las partículas de plata.} 
 	\label{sch:reaccion}
 \end{scheme}
 
 % Rol de cada reactivo
-En términos generales, la síntesis de este tipo de NPs corresponde a la formación de un coloide estabilizado electrostáticamente. En el esquema \ref{sch:reaccion} de describe el mecanismo aceptado para la formación de estas AgTNPs. El \ce{AgNO3} es el precursor metálico, que aporta los iones \ce{Ag+} en solución.
+En términos generales, la síntesis de este tipo de NPs corresponde a la formación de un coloide estabilizado electrostáticamente. En el esquema \ref{sch:reaccion} se describe el mecanismo aceptado para la formación de estas AgTNPs. El \ce{AgNO3} es el precursor metálico, que aporta los iones \ce{Ag+} en solución.
 Los aniones citrato (\ce{C6H5O7^3-}) actúan como agente protector o estabilizador. 
 Se adsorbe a la superficie de las partículas durante el crecimiento y aporta carga negativa.
 De esta manera se evita que las AgNPs en formación se aglomeren, coalescan y precipiten como un sólido masivo.
 El \ce{BH4-} es un agente reductor fuerte, que reduce los iones \ce{Ag+} a \ce{Ag^0}. 
-El reductor se encuentra en exceso (10:1 respecto de \ce{Ag+}) dentro de la solución, por lo que se forma una gran cantidad de nucleos de \ce{Ag^0} que no llegan a crecer a tamaños mayores a los $~$\qty{3}{\nano\meter}.
+El reductor se encuentra en exceso (10:1 respecto de \ce{Ag+}) dentro de la solución, por lo que se forma una gran cantidad de núcleos de \ce{Ag^0} que no llegan a crecer a tamaños mayores a los $~$\qty{3}{\nano\meter}.
 El peróxido de hidrógeno (\ce{H2O2}) aquí actúa como oxidante de las AgTNPs recién formadas (\textit{etching}). Así se inicia una reacción cíclica de reducción/oxidación que lleva a la formación de nanoplatos. 
 
 \begin{figure}[b]
@@ -45,26 +24,17 @@ El peróxido de hidrógeno (\ce{H2O2}) aquí actúa como oxidante de las AgTNPs 
 	\caption{Diagrama de las caras cristalinas presentes en los nanoplatos de Ag.}
 	\label{FIG:forma}
 \end{figure}
-Se ha propuesto que este mecanismo cíclico reducción producida por el \ce{NaBH4} y la oxidación producida por el \ce{H2O2} fomentan la formación de fallas de apilamiento el durante el crecimiento de las nanopartículas. Rocha y colaboradores mostraron que las AgNPs semillas esféricas presenten estas fallas de apilamiento en los planos \hkl{111}.\cite{rocha2007} Así entonces se pueden describir los nanoplatos como estructuras cristalinas fcc, conde las fallas de apilamiento generan una capa de estructura hcp (figura \ref{FIG:forma}).Recientemente por Tan y colaboradores observaron una disposición de distinto tipo de fallas en los planos basales \hkl{111}.\cite{tan2021}
 
-La presencia de las fallas es el causa que a las partículas que se agreguen a la nanopartícula en crecimiento lo hagan sobre los lados de la nanopartículas que presenta fallas.
-Esto genera que en lugar de crecer de manera isotrópica, hasta llegar a un dodecaedro, crece de manera anisotrópica formando platos. 
-Igualmente, no todos los planos tienen la misma "prioridad" de crecimiento, de esta manera, en lugar de crecer platos hexagonales de se forman platos triangulares de plata.
+Se ha propuesto que este mecanismo cíclico reducción producida por el \ce{NaBH4} y la oxidación producida por el \ce{H2O2} fomentan la formación de fallas de apilamiento el durante el crecimiento de las nanopartículas. Rocha y colaboradores mostraron que las AgNPs semillas esféricas presentan estas fallas de apilamiento en los planos \hkl{111}.\cite{rocha2007} Así entonces se pueden describir los nanoplatos como estructuras cristalinas fcc, donde las fallas de apilamiento generan una capa de estructura hcp, Fig. \ref{FIG:forma}.Recientemente Tan y colaboradores observaron una disposición de distintos tipos de fallas en los planos basales \hkl{111}.\cite{tan2021}
 
-En la literatura hay varias teorías sobre el mecanismo de crecimiento de las nanopartículas.  
+% TODO: Explicar mejor la justificación del rol de las fallas
+La presencia de fallas causa que a las partículas se agreguen preferencialmente sobre estas zonas.
+Entonces, en lugar de crecer de manera isotrópica, lo hace de manera anisotrópica formando platos. 
+De la misma manera, ciertos planos laterales se ven favorecidos, de esta manera, en lugar de crecer platos hexagonales de se forman platos triangulares de plata.
 
-
-Se obtuvieron las siguientes imágenes para las nanopartículas sintentizadas en contraste de fase y en resolución standard:
-
-Las escalas de las imágenes 06 y 07 están raras, hay que tratar eso.
-
-% TODO: Figuras de las soluciones de nanopartículas de plata obtenidas 
-
-% TODO: Discusión de la interpretación de los colores
-
-% Figuras experimentales de campo claro
 % TODO: Acomodar figuras y escribir epígrafe
-\begin{figure}
+% Me combiene juntarlas en algún editor de imágen y ponerles (a) (b) a mano para controlar más la distribución?
+\begin{figure}[h]
 	\centering
 	
 	\begin{subfigure}{\linewidth}
@@ -80,24 +50,37 @@ Las escalas de las imágenes 06 y 07 están raras, hay que tratar eso.
 		\caption{}
 		\label{fig:cumulo_NPs}
 	\end{subfigure}
+	
+	\label{fig:campo_claro}
+	\caption{Imágenes de campo claro de AgNPs triangulares azules tomadas utilizando el CM200. Se observa conglomeración moderada y gran variedad en el largo de los lados.}
 \end{figure}
 
-%TODO: Discusion de las figuras anteriores
+\subsection{Nanopartículas obtenidas}
+
+% Expandir un poco más en que cambia entre las 3 y los colores
+Se realizaron 3 síntesis diferentes, la primera obtuvo una coloración azul y las dos siguientes \textbf{color}.
+
+% Muy posiblemente está mal dicho lo último, quiero decir que las partículas se encuentran con las caras hacia arriba
+Utilizando el CM200 se obtuvieron imágenes de campo claro de las partículas azules sintetizadas, Fig. \ref{fig:campo_claro}. Se confirma la formación de nanopartículas triangulares. A simple vista se identifican una gran variedad de tamaños, con lados de \qtyrange{20}{120}{\nano\meter}. En cuanto a la disposición de las partículas, la mayoría se encuentran en pequeños cúmulos y todas se depositaron con las caras \hkl{111} paralelas a la superficie. 
+% Aclaro que son todas las partículas observadas las que estaban de cara hacia arriba? 
+% Se puede decir algo más aparte de esto?
+
 
 % Intento de HRTEM
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{./NPs/mias/014_mas_FFT.png}
 	\label{fig:mi_HRTEM}	
-	\caption{text}
+	\caption{Imágen de alta resolución del borde de dos partículas superpuestas. En la esquina superior izquierda se muestra la transformada de Fourier de la imagen (FFT). Los dos puntos presentes en la FFT indican la presencia de dos diferentes orientaciones de los planos cristalinos. La forma oblonga está asociada a astigmatismo no corregido en las lentes. }
 \end{figure}
+% Por qué no se observan el resto de los puntos en la FFT?
 
-%TODO: Discusion de las figuras anteriores
+% Aparecen dos puntos es demasiado coloquial
+Luego se realizaron imágenes de HRTEM de la misma muestra. En Fig. \ref{fig:mi_HRTEM} se tomaron dos partículas apiladas. A pesar del alto nivel de ruido y que no se observen columnas atómicas, igualmente aparecen dos puntos en la transformada de Fourier. Estos están asociados a los planos \hkl{} que se encuentran paralelos a la dirección del borde. Los otros planos no se observan por el astigmatismo de los lentes.
+
+La periodicidad los planos identificados es de \SI{0.27}{\nano\metre}, lo que coincide a la reflexión ... de tal red cristalina.
 
 
-No se lograron tomar imágenes de alta resolución debido a que los microscopios a disposición se encontraban en reparación. Por estos inconvenientes los análisis subsecuentes se realizaron utilizando imágenes viejas, tomadas en el 2017.
-
-Tenemos varias imágenes para analizar
 
 %TODO: Reemplazar por figura original o hablar de la figura que tomó Julio
 %TODO: Marcar las posiciones de las fallas
