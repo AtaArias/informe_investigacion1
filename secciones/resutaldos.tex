@@ -5,29 +5,30 @@
 % Expandir un poco más en que cambia entre las 3 y los colores
 Se realizaron tres síntesis diferentes de AgNPs. La primera fue de los  nanotriángulos (AgTNPs) y fue la única que se pudo caracterizar parcialmente ya que los microscopios sufrieron fallas de funcionamiento y se encuentran en reparación. Las otras dos síntesis de partículas esféricas de distinto tamaño no llegaron a ser caracterizadas.
 
-La figura \ref{fig:campo_claro} muestra imágenes de campo claro representativas de las AgTNPs sintetizadas, utilizando el microscopio Phillips CM200-UT. La primer característica que se destaca es la superposición de las partículas y su orientación preferencial. Se identifican claramente que dicha superposición por que son parcialmente transparente a los electrones. Esto es un indicador indirecto del delgado espesor de estos AgTNps. Se puede observar un amplio rango de tamaños, con lados entre \qtyrange{20}{120}{\nano\meter}. 
-
-% TODO: Acomodar figuras y escribir epígrafe
-% Me combiene juntarlas en algún editor de imágen y ponerles (a) (b) a mano para controlar más la distribución?
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}{\linewidth}
 		\centering
-		\includegraphics[width=0.9\linewidth]{./NPs/mias/012.png}
+		\includegraphics[width=0.8\linewidth]{./NPs/mias/012.png}
 		\caption{}
 		\label{fig:cumulo_NPs}
 	\end{subfigure}
 	
 	\begin{subfigure}{\linewidth}
 		\centering
-		\includegraphics[width=0.9\linewidth]{./NPs/mias/03.png}
+		\includegraphics[width=0.8\linewidth]{./NPs/mias/03.png}
 		\caption{}
 		\label{fig:pocas_NPs}
 	\end{subfigure}
 	
-	\label{fig:campo_claro}
 	\caption{Imágenes de campo claro de AgNPs triangulares azules tomadas utilizando el CM200. Se observa conglomeración moderada y gran variedad en el largo de los lados.}
+	\label{fig:campo_claro}
 \end{figure}
+
+La figura \ref{fig:campo_claro} muestra imágenes de campo claro representativas de las AgTNPs sintetizadas, utilizando el microscopio Phillips CM200-UT. La primer característica que se destaca es la superposición de las partículas y su orientación preferencial. Se identifican claramente que dicha superposición por que son parcialmente transparente a los electrones. Esto es un indicador indirecto del delgado espesor de estos AgTNps. Se puede observar un amplio rango de tamaños, con lados entre \qtyrange{20}{120}{\nano\meter}. 
+
+% TODO: Acomodar figuras y escribir epígrafe
+% Me combiene juntarlas en algún editor de imágen y ponerles (a) (b) a mano para controlar más la distribución?
 
 Nótese que en la figura \ref{fig:pocas_NPs} se observan unas franjas oscuras y claras en la superposición de algunas AgTNPs. Esos patrones de Moirè son producto de la superposición de dos estructuras periódicas levemente rotadas o desfasadas. No se deben confundir con espaciados interplanaras que se observan el HRTEM.
 
@@ -50,7 +51,7 @@ El \ce{BH4-} es un agente reductor fuerte, que reduce los iones \ce{Ag+} a \ce{A
 El reductor se encuentra en exceso (10:1 respecto de \ce{Ag+}) dentro de la solución, por lo que se forma una gran cantidad de núcleos de \ce{Ag^0} que no llegan a crecer a tamaños mayores a los $~$\qty{3}{\nano\meter}.
 El peróxido de hidrógeno (\ce{H2O2}) aquí actúa como oxidante de las AgTNPs recién formadas (\textit{etching}). Así se inicia una reacción cíclica de reducción/oxidación que lleva a la formación de nanoplatos. 
 
-\begin{figure}
+\begin{figure}[h]
 	\centering \sffamily \tiny
 	\includesvg[width=0.9\linewidth]{NPs/forma}
 	\caption{Diagrama de las caras cristalinas presentes en los nanoplatos de Ag.}
@@ -71,11 +72,11 @@ Hasta el momento, el modelo que permite relacionar la geometría que adoptan las
 El contraste en las imágenes de alta resolución se genera por interferencias (deferencia en la fase) de las ondas de electrones al atravesar el material. Se puede pensar que los átomos en el material aportan un potencial (dado principalmente por la carga del núcleo) que interactúa con una onda plana que atraviesa el material. Así, se puede armar en un arreglo tridimensional de un determinado potencial en diferentes puntos, y se podría resolver la ecuación de Schroedinger para obtener la onda de salida. 
 
 % Intento de HRTEM
-\begin{figure}
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=\linewidth]{./NPs/mias/014_mas_FFT.png}\\ \vspace{0.2em}
-	\includegraphics[width=0.485\linewidth]{NPs/mias/A1_AgNPs_Azules_0014_b}\hspace{0.2em}
-	\includegraphics[width=0.485\linewidth]{NPs/mias/A1_AgNPs_Azules_0014_a}
+	\includegraphics[width= 0.8\linewidth]{./NPs/mias/014_mas_FFT.png}\\ \vspace{0.2em}
+	\includegraphics[width=0.385\linewidth]{NPs/mias/A1_AgNPs_Azules_0014_b}\hspace{0.2em}
+	\includegraphics[width=0.385\linewidth]{NPs/mias/A1_AgNPs_Azules_0014_a}
 	\caption{Imagen de alta resolución del borde de dos partículas superpuestas. En la esquina superior izquierda se muestra la transformada de Fourier de la imagen (FFT). Los dos puntos presentes en la FFT indican la presencia de dos diferentes orientaciones de los planos cristalinos. La forma oblonga está asociada a astigmatismo no corregido en las lentes. Abajo de muestran imágenes filtradas de cada par de puntos de la FFT. Magnificación \qty{220}{\kilo\times}.}
 	\label{fig:mi_HRTEM}
 \end{figure}
@@ -85,50 +86,32 @@ Hemos podido obtener algunas imágenes experimentales en alta resolución antes 
 
 La figura \ref{fig:mi_HRTEM_2} muestra otro ejemplo que imagen HRTEM que hemos podido capturar. En ese caso, la FFT muestra tres pares de puntos equidistantes al centro y al mismo angulo. No se corresponden con reflexiones esperables para una estructura fcc de plata. En la literatura se ha descripto esas reflexiones como una reflexion ``prohibida'' para una red fcc indexada como $\frac{1}{3}$\hkl{422}. Estas reflexiones prohididas para una fcc, si son permitidas para un estructura hcp y se corresponden con las familias \hkl{-1100}. Así entonces, es mas lógico describir el sistema como una combinación de fases fcc y hcp producto de fallas de apilamiento en los planos \hkl{111}. Se puede notar en este caso, que en el centro de la FFT se muestra un halo mas circular respecto del ejemplo anterior. En ese caso, el astigmatismo fue corregido. Sin embargo, se observa un segundo anillo que se encuentra interrumpido. Eso se debe a un efecto del movimiento de la muestra (\textit{drift}). A esa magnificación (\qty{220}{\kilo\times}) cualquier leve movimiento como puede ser la relajación mecánica luego de mover el portamuestra afecta la calidad de la imagen.
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=\linewidth]{./NPs/mias/015_con_FFT.png}
+	\includegraphics[width=0.8\linewidth]{./NPs/mias/015_con_FFT.png}
 	\caption{Imagen de alta resolución de una partículas. En la esquina superior derecha se muestra la transformada de Fourier de la imagen (FFT). Las reflexiones corresponden a una estructura hcp. Magnificación \qty{220}{\kilo\times}.
 	}
 	\label{fig:mi_HRTEM_2}
 \end{figure}
 
-
-Luego se realizaron imágenes de HRTEM de la misma muestra. En Fig. \ref{fig:mi_HRTEM} se tomaron dos partículas apiladas. A pesar del alto nivel de ruido y que no se observen columnas atómicas, igualmente aparecen dos puntos en la transformada de Fourier. Estos están asociados a los planos \hkl{} que se encuentran paralelos a la dirección del borde. Los otros planos no se observan por el astigmatismo de los lentes.
-
-En Fig. \ref{fig:mi_HRTEM_2} se observa una partícula más pequeña cuyo FFT presenta 6 puntos en forma de hexágono. Esto indica la presencia de una estructura hcp en la partícula, lo que son las fallas de apilamiento. A diferencia de la figura \ref{fig:mi_HRTEM} la FFT no presenta tanta deformación en la diagonal. Es decir, no presenta astigmatismo. Esta diferencia permite que aparezcan las 6 reflexiones esperadas y no solo 2 que coinciden con la dirección en que se elonga la FFT.
-
 La periodicidad los planos identificados en ambas figuras son de \SI{0.26 \pm 0.1}{\nano\metre}, en concordancia con los \SI{0.249}{\nano\metre} reportados en la literatura \cite{rocha2007}.
-% Están realmente en cooncordancia la imagen del borde da una distancia más cercana a 0.27
-% Y la segunda da 0.26, me tiraria a decir que mantenemos el problema de calibración pero no tengo
-% suficiente seguridad para plantearlo.
 
-% Agregar la imagen de la otra partícul que conseguimos
-% Tiene menos atigmatismo entonces se ven las 6 reflexiones aunque no sean obvias en la imagen
-
-Dado que no pudimos tomar mas y mejores imágenes de HRTEM, analizamos algunas imágenes adquiridas previamente con el microscopio FEI Tecnai F20. La figura \ref{fig:hrtem_canto} muestra una particula en vista lateral (canto) donde se aprecian las fallas de apilamiento en el centro del espesor de la AgTNPs. En este caso, no e tan fácil de identificar que tipo de fallas son: si falta un plano (SF-m), y hay un plano extra (SF-i) o si hay una plano de macla (SF-twin). Aparentemente, se observamos las zonas externas de la partícula correspondiente a una face fcc, perece identificarse que las dos regiones estan invertivas (equivalente a la presencia de un SF-twin).
+Dado que no pudimos tomar mejores imágenes de HRTEM, analizamos algunas adquiridas previamente con el microscopio FEI Tecnai F20. La figura \ref{fig:hrtem_canto} muestra una particula en vista lateral (canto) donde se aprecian las fallas de apilamiento en el centro del espesor de la AgTNPs. En este caso, no es tan fácil de identificar que tipo de fallas son: si falta un plano (SF-m), si hay un plano extra (SF-i) o si hay una plano de macla (SF-twin). Aparentemente, se observamos las zonas externas de la partícula correspondiente a una face fcc, perece identificarse que las dos regiones están invertivas (equivalente a la presencia de un SF-twin).
 
 \begin{figure}
 	\centering
-	\includegraphics[width=\linewidth]{NPs/Julio/03-HRTEMcanto.png}
+	\includegraphics[width=0.8\linewidth]{NPs/Julio/03-HRTEMcanto.png}
 	\caption{Imagen de una nanopartícula triangular de plata vista desde el costado. El haz de electrones da con el plano {hkl} }
 	\label{fig:hrtem_canto}
 \end{figure}
- La figura \ref{fig:NP_grande_zoom} se observa el borde lateral de una AgTNPs. Pueden notarse distintas características en la imagen. En el borde las columnas atómicas parecen ser puntos negros sobre un fondo blanco, mientras que en el interior parecen ser puntos blancos sobre fondo negro. Esto podría ser producto de un cambio brusco de espero ya que como se observa el la figura \ref{fig:hrtem_canto} el borde es redondeado. También, se puede notar que algunos puntos parecen mostrarse alargados. Esto ultimo podría deberse a que la partícula esta levemente inclinada.
 
 
+La figura \ref{fig:NP_grande_zoom} se observa el borde lateral de una AgTNPs. Pueden notarse distintas características en la imagen. En el borde las columnas atómicas parecen ser puntos negros sobre un fondo blanco, mientras que en el interior parecen ser puntos blancos sobre fondo negro. Esto podría ser producto de un cambio brusco de espero ya que como se observa el la figura \ref{fig:hrtem_canto} el borde es redondeado. También, se puede notar que algunos puntos parecen mostrarse alargados. Esto ultimo podría deberse a que la partícula esta levemente inclinada.
 
-
-%\begin{figure}
-%	\centering
-%	\includegraphics[width=\linewidth]{./NPs/Julio/Julio_0022_full.png}
-%	\caption{Micrografía tomada mediante HRTEM de una nanopartícula de plata triangular. Hay una diferencia de contraste entre los bordes de la partícula y el  centro.}
-%	\label{fig:NP_grande}
-%\end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=\linewidth]{./NPs/Julio/Julio_0022_zoom_sin_escala.png}
+	\includegraphics[width=0.8\linewidth]{./NPs/Julio/Julio_0022_zoom_sin_escala.png}
 	\caption{Imagen HRTEM del borde de una AgTNPs en orientación cercada al eje de zona \hkl[111].}
 	\label{fig:NP_grande_zoom}
 \end{figure}
@@ -143,7 +126,7 @@ Al simular una estructura sin fallas de apilamiento, fcc puro, se obtuvo la figu
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{Simulaciones/fcc_puro_noisy(1).png}
+	\includegraphics[width=0.85\linewidth]{Simulaciones/fcc_puro.png}
 	\caption{Simulación mediante el método de multislice para una estructura de empaquetamiento compacto de 30 planos de altura sin fallas de apilamiento. La imágen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de scherzer.}
 	\label{fig:fcc_puro}
 \end{figure}
@@ -152,8 +135,8 @@ Al simular una estructura del tipo hcp con diferentes espesores so obtiene la se
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{Simulaciones/solo_hcp.png}
-	\caption{Simulación mediante el método de multislice para diferentes estructuras de empaquetamiento compacto HCP de 12 a 32 planos de altura. La imágen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de scherzer. Se observa un cambio en el contraste al variar el espesor de la muestra.}
+	\includegraphics[width=\linewidth]{Simulaciones/solo_hcp_recortado.png}
+	\caption{Simulación mediante el método de multislice para diferentes estructuras de empaquetamiento compacto HCP de 12 a 32 planos de altura. La imagen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de scherzer. Se observa un cambio en el contraste al variar el espesor de la muestra.}
 	\label{fig:hcp_puro}
 \end{figure}
 
@@ -161,7 +144,7 @@ Finalmente, se simularon imágenes de HRTEM para estructuras tipo ``sanguche'' m
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{Simulaciones/sanguchitos.png}
+	\includegraphics[width=\linewidth]{Simulaciones/sanguchitos_recortado.png}
 	\caption{Simulación mediante el método de multislice para diferentes estructuras de empaquetamiento compacto HCP de 12 a 32 planos de altura. La imágen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de scherzer.}
 	\label{fig:sanguchito}
 \end{figure}

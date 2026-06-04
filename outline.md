@@ -1,7 +1,16 @@
-TODO: Me está faltando meter la CTF en algún lado.
-TODO: Preguntas -> que se vuelvan respuestas.
-TODO: Ponemos algo de desarrollo de código y familiarización con otras herramientas?
-TODO: Agregar todas las citas.
+
+TODO: Resumen y conclusión
+TODO: Leer los epígrafes
+TODO: Revisar que no falten citas
+
+## En proceso:
+- Resultados, HRTEM y simulaciones
+- Conclusiones
+- Resumen
+
+## Terminado:
+- Introducción
+- Metodos
 
 # Outline del informe de invesigación 1
 
