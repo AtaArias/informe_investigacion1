@@ -137,12 +137,34 @@ Dado que no pudimos tomar mas y mejores imágenes de HRTEM, analizamos algunas i
 
 Para interpretar los cambios de contraste y su relación con la estructura cristalina de las partículas es necesario realizar simulaciones. Para esto, el método multislice es muy versátil porque no requiere de una estructura periódica en las tres dimensiones.
 
+Para ejemplificar el problema observado al realizar las simulaciones se muestra sel siguiente caso de estudio.
 
+Al simular una estructura sin fallas de apilamiento, fcc puro, se obtuvo la figura \ref{fig:fcc_puro}-
 
-Lo primero se obtuvo una imagen simulada con el mismo tipo de contraste que en el borde nanopartícula.
-A partir de estas se compararon los perfiles de intensidad en las tres direcciones de crecimiento (direcciones de crecimiento? ) de la nanopartícula.
-A partir de los perfiles obtenemos cual es la periodicidad del patrón observado en la imagen.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Simulaciones/fcc_puro_noisy(1).png}
+	\caption{Simulación mediante el método de multislice para una estructura de empaquetamiento compacto de 30 planos de altura sin fallas de apilamiento. La imágen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de scherzer.}
+	\label{fig:fcc_puro}
+\end{figure}
 
+Al simular una estructura del tipo hcp con diferentes espesores so obtiene la serie de la figura \ref{fig:hcp_puro}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Simulaciones/solo_hcp.png}
+	\caption{Simulación mediante el método de multislice para diferentes estructuras de empaquetamiento compacto HCP de 12 a 32 planos de altura. La imágen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de scherzer. Se observa un cambio en el contraste al variar el espesor de la muestra.}
+	\label{fig:hcp_puro}
+\end{figure}
+
+Finalmente, se simularon imágenes de HRTEM para estructuras tipo ``sanguche'' manteniendo fija la cantidad de hcp en el centro. Las estructuras se formaron con 12 planos hcp en el centro de la pila y se varió de manera simétrica la cantidad de fcc en los bordes entre  tomando valores de 6, 9 y 12 planos. Los resultados se presentan como una serie en la figura \ref{fig:sanguchito}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Simulaciones/sanguchitos.png}
+	\caption{Simulación mediante el método de multislice para diferentes estructuras de empaquetamiento compacto HCP de 12 a 32 planos de altura. La imágen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de scherzer.}
+	\label{fig:sanguchito}
+\end{figure}
 
 %TODO: En la parte de la toma de perfiles, no me van a preguntar directamente por qué no trabajo en el espacio recíproco?
 %TODO: Análsis de las simulaciones
