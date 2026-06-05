@@ -118,42 +118,38 @@ La figura \ref{fig:NP_grande_zoom} se observa el borde lateral de una AgTNPs. Pu
 
 \subsubsection*{Simulaciones por el método multislice}
 
-Para interpretar los cambios de contraste y su relación con la estructura cristalina de las partículas es necesario realizar simulaciones. Para esto, el método multislice es muy versátil porque no requiere de una estructura periódica en las tres dimensiones.
-
-Para ejemplificar el problema observado al realizar las simulaciones se muestra sel siguiente caso de estudio.
-
-Al simular una estructura sin fallas de apilamiento, fcc puro, se obtuvo la figura \ref{fig:fcc_puro}-
+Para interpretar los cambios de contraste y su relación con la estructura cristalina de las partículas es necesario realizar simulaciones. Para esto, el método multislice es muy versátil porque no requiere de una estructura periódica en las tres dimensiones. 
+Se buscó realizar un estudio general de el efecto de las fallas en el patrón final. Para lo que se comenzó trabajando con estructuras simples. Además, para no agregar otro grado de libertad, todas las simulaciones se realizaron con la misma CFT, la correspondiente a el microscopio Philips CM200-UT en condición de Scherzer. 
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.85\linewidth]{Simulaciones/fcc_puro.png}
-	\caption{Simulación mediante el método de multislice para una estructura de empaquetamiento compacto de 30 planos de altura sin fallas de apilamiento. La imágen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de scherzer.}
+	\caption{Simulación mediante el método de multislice para una estructura de empaquetamiento compacto de 30 planos de altura sin fallas de apilamiento. La imagen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de Scherzer.}
 	\label{fig:fcc_puro}
 \end{figure}
 
-Al simular una estructura del tipo hcp con diferentes espesores so obtiene la serie de la figura \ref{fig:hcp_puro}
+En primer instancia se simuló la imagen de una muestra sin fallas de apilamiento (fcc puro). En la figura \ref{fig:fcc_puro} se presenta lo obtenido utilizando una estructura de 30 planos fcc. La observación principal es que el patrón resultante es de baja intensidad y en la práctica se perdería debajo del ruido producido por la sustrato. Esto ocurre porque al trabajar en el eje de zona \hkl[1,1,1] los planos el los planos que están en condición de Bragg son lo que corresponden a los planos \hkl{2,2,0} cuya distancia interplanar es de \SI{1.445}{\AA}.
+El vector de onda asociado $k$ a una distancia interplanar de \SI{1.445}{\AA} es de \SI{0.692}{\AA^{-1}}. Dicho valor de $k$ es atenuado casi en su totalidad por la CTF usada. Por lo cual no se observa en la imágen final.
+
+Seguidamente se simularon muestras compuestas solamente por planos ``AB'' (hcp puro), para diferentes espesores. Se observa en la serie de la figura \ref{fig:hcp_puro} que para todos los espesores la intensidad es superior a lo obtenido para muestras sin fallas. Esto sucede porque al tener fallas los planos que difractan en el eje de zona \hkl[1,1,1] son los PONERPLANOS de la hcp, cuyo vector de onda cae dentro de la zona ``permitida'' por la CTF. 
+
+Lo siguiente que se destaca es el cambio del contraste en función del espesor de la muestra. Al simular 12 planos (64$\times$AB) se presenta un patrón tipo panal de abeja. Y al ir aumentando la cantidad de planos la imágen transiciona gradualmente a un patrón de puntos blancos sobre un fondo difuso.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{Simulaciones/solo_hcp_recortado.png}
-	\caption{Simulación mediante el método de multislice para diferentes estructuras de empaquetamiento compacto HCP de 12 a 32 planos de altura. La imagen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de scherzer. Se observa un cambio en el contraste al variar el espesor de la muestra.}
+	\caption{Simulación mediante el método de multislice para diferentes estructuras de empaquetamiento compacto HCP de 12 a 32 planos de altura. La imagen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de Scherzer. Se observa un cambio en el contraste al variar el espesor de la muestra.}
 	\label{fig:hcp_puro}
 \end{figure}
 
-Finalmente, se simularon imágenes de HRTEM para estructuras tipo ``sanguche'' manteniendo fija la cantidad de hcp en el centro. Las estructuras se formaron con 12 planos hcp en el centro de la pila y se varió de manera simétrica la cantidad de fcc en los bordes entre  tomando valores de 6, 9 y 12 planos. Los resultados se presentan como una serie en la figura \ref{fig:sanguchito}
+Finalmente, se simularon estructuras tipo ``sánguche'' manteniendo fija la cantidad de hcp en el centro. Las estructuras se formaron con 12 planos hcp en el centro de la pila y se varió de manera simétrica la cantidad de fcc en los bordes tomando valores de 6, 9 y 12 planos. Los resultados se presentan como una serie en la figura \ref{fig:sanguchito}. Lo principal que destaca es que el contrate varía a pesar de mantener fija la cantidad de fallas en el centro, al contrario de lo que diría una primer intuición según lo observado previamente. Es decir, el contraste final es un resultado complejo de las fallas dentro de la estructura. Indicando que para realizar un estudio más detallado hay que dejar el modelo de sánguche y trasladarse a una descripción más completa de las estructuras.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{Simulaciones/sanguchitos_recortado.png}
-	\caption{Simulación mediante el método de multislice para diferentes estructuras de empaquetamiento compacto HCP de 12 a 32 planos de altura. La imágen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de scherzer.}
+	\caption{Simulación mediante el método de multislice para diferentes estructuras de empaquetamiento compacto HCP de 12 a 32 planos de altura. La imagen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de Scherzer.}
 	\label{fig:sanguchito}
 \end{figure}
 
-%TODO: En la parte de la toma de perfiles, no me van a preguntar directamente por qué no trabajo en el espacio recíproco?
-%TODO: Análsis de las simulaciones
-% con la posición de los puntos...
-%Para la imagen experimental se observa una distancia de \SI{Valor}{unidad}
-%En el caso de la imagen simulada es \SI{Valor}{unidad}
-
-%TODO: Figura de una simulación
-%TODO: Comparación con el resultado experimental
+% Cerrar mejor esta sección
+% Ponemos algo de que el hecho de que se vean las partículas indica que hay fallas presentes dentro?
