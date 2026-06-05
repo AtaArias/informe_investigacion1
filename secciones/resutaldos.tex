@@ -98,16 +98,14 @@ La periodicidad los planos identificados en ambas figuras son de \SI{0.26 \pm 0.
 
 Dado que no pudimos tomar mejores imágenes de HRTEM, analizamos algunas adquiridas previamente con el microscopio FEI Tecnai F20. La figura \ref{fig:hrtem_canto} muestra una particula en vista lateral (canto) donde se aprecian las fallas de apilamiento en el centro del espesor de la AgTNPs. En este caso, no es tan fácil de identificar que tipo de fallas son: si falta un plano (SF-m), si hay un plano extra (SF-i) o si hay una plano de macla (SF-twin). Aparentemente, se observamos las zonas externas de la partícula correspondiente a una face fcc, perece identificarse que las dos regiones están invertivas (equivalente a la presencia de un SF-twin).
 
-\begin{figure}
+La figura \ref{fig:NP_grande_zoom} se observa el borde lateral de una AgTNPs. Pueden notarse distintas características en la imagen. En el borde las columnas atómicas parecen ser puntos negros sobre un fondo blanco, mientras que en el interior parecen ser puntos blancos sobre fondo negro. Esto podría ser producto de un cambio brusco de espero ya que como se observa el la figura \ref{fig:hrtem_canto} el borde es redondeado. También, se puede notar que algunos puntos parecen mostrarse alargados. Esto ultimo podría deberse a que la partícula esta levemente inclinada.
+
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\linewidth]{NPs/Julio/03-HRTEMcanto.png}
 	\caption{Imagen de una nanopartícula triangular de plata vista desde el costado. El haz de electrones da con el plano {hkl} }
 	\label{fig:hrtem_canto}
 \end{figure}
-
-
-La figura \ref{fig:NP_grande_zoom} se observa el borde lateral de una AgTNPs. Pueden notarse distintas características en la imagen. En el borde las columnas atómicas parecen ser puntos negros sobre un fondo blanco, mientras que en el interior parecen ser puntos blancos sobre fondo negro. Esto podría ser producto de un cambio brusco de espero ya que como se observa el la figura \ref{fig:hrtem_canto} el borde es redondeado. También, se puede notar que algunos puntos parecen mostrarse alargados. Esto ultimo podría deberse a que la partícula esta levemente inclinada.
-
 
 \begin{figure}
 	\centering
@@ -116,10 +114,12 @@ La figura \ref{fig:NP_grande_zoom} se observa el borde lateral de una AgTNPs. Pu
 	\label{fig:NP_grande_zoom}
 \end{figure}
 
+%\FloatBarrier
+
 \subsubsection*{Simulaciones por el método multislice}
 
 Para interpretar los cambios de contraste y su relación con la estructura cristalina de las partículas es necesario realizar simulaciones. Para esto, el método multislice es muy versátil porque no requiere de una estructura periódica en las tres dimensiones. 
-Se buscó realizar un estudio general de el efecto de las fallas en el patrón final. Para lo que se comenzó trabajando con estructuras simples. Además, para no agregar otro grado de libertad, todas las simulaciones se realizaron con la misma CFT, la correspondiente a el microscopio Philips CM200-UT en condición de Scherzer. 
+Se buscó realizar un estudio general de el efecto de las fallas en el patrón final. Para lo que se comenzó trabajando con estructuras simples. Además, para no agregar otro grado de libertad, todas las simulaciones se realizaron con la misma CFT, la correspondiente a el microscopio Philips CM200-UT para el defoco de Scherzer. 
 
 \begin{figure}
 	\centering
@@ -128,14 +128,45 @@ Se buscó realizar un estudio general de el efecto de las fallas en el patrón f
 	\label{fig:fcc_puro}
 \end{figure}
 
-En primer instancia se simuló la imagen de una muestra sin fallas de apilamiento (fcc puro). En la figura \ref{fig:fcc_puro} se presenta lo obtenido utilizando una estructura de 30 planos fcc. La observación principal es que el patrón resultante es de baja intensidad y en la práctica se perdería debajo del ruido producido por la sustrato. Esto ocurre porque al trabajar en el eje de zona \hkl[1,1,1] los planos el los planos que están en condición de Bragg son lo que corresponden a los planos \hkl{2,2,0} cuya distancia interplanar es de \SI{1.445}{\AA}.
-El vector de onda asociado $k$ a una distancia interplanar de \SI{1.445}{\AA} es de \SI{0.692}{\AA^{-1}}. Dicho valor de $k$ es atenuado casi en su totalidad por la CTF usada. Por lo cual no se observa en la imágen final.
+En primer instancia se simuló la imagen de una muestra sin fallas de apilamiento (fcc puro). La tabla \ref{tab:plans_fcc} muestra las primeras reflexiones de difracción de electrones esperadas para una estructura Ag fcc. En la figura \ref{fig:fcc_puro} se presenta lo obtenido utilizando una estructura de 30 planos fcc. La observación principal es que el patrón resultante es de baja intensidad y en la práctica se perdería debajo del ruido producido por la sustrato. Esto ocurre porque al trabajar en el eje de zona \hkl[111] los planos el los planos que están en condición de Bragg son lo que corresponden a los planos \hkl{220} cuya distancia interplanar es de \qty{1.445}{\angstrom}.
+El vector de onda asociado $k$ a una distancia interplanar de \SI{1.445}{\AA}, y por lo tango $g_{220}=\qty{0.692}{\per\angstrom}$. Dicho valor de $k$ es atenuado casi en su totalidad por la CTF usada. Puede apreciarse que la envolvente de la curva correspondiente a la coherencia temporal llega a cero a $k\simeq\qty{0.6}{\per\angstrom}$. Por lo cual no se observa diferencias de contraste en la imágen final.
 
-Seguidamente se simularon muestras compuestas solamente por planos ``AB'' (hcp puro), para diferentes espesores. Se observa en la serie de la figura \ref{fig:hcp_puro} que para todos los espesores la intensidad es superior a lo obtenido para muestras sin fallas. Esto sucede porque al tener fallas los planos que difractan en el eje de zona \hkl[1,1,1] son los PONERPLANOS de la hcp, cuyo vector de onda cae dentro de la zona ``permitida'' por la CTF. 
+\begin{table}[h]
+	\caption{Primeras reflexiones de difracción de electrones para Ag fcc}
+	\centering
+	\begin{tabular}{lll}
+		\hline
+		Reflexión ($hkl$)& Distancia $d$ (\unit{\angstrom})& $g$ (\unit{\per\angstrom})\\
+		\hkl(111)& 2.359& 0.4239\\
+		\hkl(200)& 2.043& 0.4895\\
+		\hkl(220)& 1.445& 0.6922\\
+		\hline
+	\end{tabular}
+	\label{tab:plans_fcc}
+\end{table}
 
-Lo siguiente que se destaca es el cambio del contraste en función del espesor de la muestra. Al simular 12 planos (64$\times$AB) se presenta un patrón tipo panal de abeja. Y al ir aumentando la cantidad de planos la imágen transiciona gradualmente a un patrón de puntos blancos sobre un fondo difuso.
+Seguidamente se simularon muestras compuestas solamente por planos ``AB'' (hcp puro), para diferentes espesores. Se observa en la serie de la figura \ref{fig:hcp_puro} que hay cambios notorios en el contraste respecto al número de capas atómicas. Para una estructura hcp orientada con los planos compactos basales perpendiculares al haz de electrones, corresponde a una orientación \hkl[0001]. Aquí entonces, las reflexiones de la familia \hkl{10-10} con el espaciado interplanar de \qty{2.502}{\angstrom} y \hkl{0002} con espaciado interplanar \qty{2.359}{\angstrom} coincidentes con los planos \hkl{111} en una estructura fcc. La tabla \ref{tab:planos_hcp} muestra las primeras reflexiones de difracción de electrnes esperadas para una estructura de Ag hcp.
 
-\begin{figure}
+\begin{table}[h]
+	\caption{Primeras reflexiones de difracción de electrones para Ag hcp}
+	\centering
+	\begin{tabular}{lll}
+		\hline
+		Reflexión ($hk\cdot l$) & Distancia $d$ (\unit{\angstrom})& $g$ (\unit{\per\angstrom}) \\
+%		\hline
+		\hkl(10-10)& 2.502& 0.3997\\
+		\hkl(0002)& 2.359& 0.4239\\
+		\hkl(10-11)& 2.211& 0.4524\\
+		\hkl(10-12)& 1.716& 0.5826\\
+		\hline
+	\end{tabular}
+	\label{tab:planos_hcp}
+\end{table}
+
+
+Lo siguiente que se destaca es el cambio del contraste en función del espesor de la muestra. Al simular 12 planos (6$\times$AB) se presenta un patrón tipo panal de abeja. Y al ir aumentando la cantidad de planos la imágen transiciona gradualmente a un patrón de puntos blancos sobre un fondo difuso. Cabe destacar que la longitud de extinsión ($\zeta_{\hkl{10-10}}$) para las refexiones esperadas es de \qty{59.5}{\nano\meter} y no seria directamente responsable del cambio del contraste.
+
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=\linewidth]{Simulaciones/solo_hcp_recortado.png}
 	\caption{Simulación mediante el método de multislice para diferentes estructuras de empaquetamiento compacto HCP de 12 a 32 planos de altura. La imagen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de Scherzer. Se observa un cambio en el contraste al variar el espesor de la muestra.}
@@ -144,12 +175,13 @@ Lo siguiente que se destaca es el cambio del contraste en función del espesor d
 
 Finalmente, se simularon estructuras tipo ``sánguche'' manteniendo fija la cantidad de hcp en el centro. Las estructuras se formaron con 12 planos hcp en el centro de la pila y se varió de manera simétrica la cantidad de fcc en los bordes tomando valores de 6, 9 y 12 planos. Los resultados se presentan como una serie en la figura \ref{fig:sanguchito}. Lo principal que destaca es que el contrate varía a pesar de mantener fija la cantidad de fallas en el centro, al contrario de lo que diría una primer intuición según lo observado previamente. Es decir, el contraste final es un resultado complejo de las fallas dentro de la estructura. Indicando que para realizar un estudio más detallado hay que dejar el modelo de sánguche y trasladarse a una descripción más completa de las estructuras.
 
-\begin{figure}
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=\linewidth]{Simulaciones/sanguchitos_recortado.png}
 	\caption{Simulación mediante el método de multislice para diferentes estructuras de empaquetamiento compacto HCP de 12 a 32 planos de altura. La imagen corresponde a lo que se observaría en el microscopio Philips CM200-UT en el defoco de Scherzer.}
 	\label{fig:sanguchito}
 \end{figure}
 
+\FloatBarrier
 % Cerrar mejor esta sección
 % Ponemos algo de que el hecho de que se vean las partículas indica que hay fallas presentes dentro?
